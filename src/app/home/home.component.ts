@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HomeService} from './home.service';
+import {ActivatedRoute, Router} from '@angular/router';
+
 
 @Component({
     selector: 'app-home',
@@ -9,11 +11,11 @@ import {HomeService} from './home.service';
 export class HomeComponent implements OnInit {
     categories = {};
 
-    constructor(private homeService: HomeService) {
+    constructor(private homeService: HomeService, private router: Router ) {
     }
 
     ngOnInit(): void {
-        this.category_data();
+            this.category_data();
     }
 
     category_data() {
@@ -21,4 +23,7 @@ export class HomeComponent implements OnInit {
             this.categories = data;
         });
     }
+
+
+
 }

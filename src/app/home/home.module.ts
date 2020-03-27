@@ -8,11 +8,11 @@ import { SpecialofferComponent } from './specialoffer/specialoffer.component';
 import { EventsComponent } from './events/events.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurservicesComponent } from './ourservices/ourservices.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({

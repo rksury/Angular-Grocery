@@ -24,7 +24,11 @@ const routes: Routes = [
             {path: 'aboutus', component: AboutusComponent},
             {path: 'services', component: OurservicesComponent},
             {path: 'products', component: ProductsComponent},
-            {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+            { path: 'product/:id', component: ProductsComponent },
+
+            {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
+
+            // { path: '**', component: PageNotFoundComponent }
 
         ]
 
