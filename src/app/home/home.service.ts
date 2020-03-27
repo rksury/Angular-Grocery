@@ -6,13 +6,13 @@ import {environment} from '../../environments/environment';
     providedIn: 'root'
 })
 export class HomeService {
-     baseurl = environment.baseurl ;
+    baseurl = environment.baseurl;
 
     constructor(private httpClient: HttpClient) {
     }
 
-        all_data() {
-            return this.httpClient.get(this.baseurl + 'product/categories' );
+        all_category() {
+        return this.httpClient.get(this.baseurl + 'product/categories');
         }
 }
 

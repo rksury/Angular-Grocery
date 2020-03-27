@@ -2,77 +2,80 @@
 
 <!-- header -->
 <div class="agileits_header">
-  <div class="w3l_offers">
-    <a [routerLink]="['/home/spcl']">Today's special Offers !</a>
-  </div>
-  <div class="w3l_search">
-    <form method="post">
-      <input name="Product" onblur="if (this.value == '') {this.value = 'Search a product...';}" onfocus="this.value = '';" required=""
-             type="text" value="Search a product...">
-      <input type="submit" value=" ">
-    </form>
-  </div>
+    <div class="w3l_offers">
+        <a [routerLink]="['/home/spcl']">Today's special Offers !</a>
+    </div>
+    <div class="w3l_search">
+        <form>
 
-  <div class="product_list_header">
-    <form  class="last" method="post">
-      <fieldset>
-        <input name="cmd" type="hidden" value="_cart"/>
-        <input name="display" type="hidden" value="1"/>
-        <input class="button" name="submit" type="submit" value="View your cart"/>
-      </fieldset>
-    </form>
-  </div>
+            <input name="Product" required=" " type="text" placeholder="Search Products....">
+<!--            <span class="material-icons">search</span>-->
+            <input class="search_icon" type="submit" value=" ">
 
-  <div class="w3l_header_right">
-    <ul>
-      <li class="dropdown profile_details_drop">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i aria-hidden="true" class="fa fa-user"></i><span
-          class="caret"></span></a>
-        <div class="mega-dropdown-menu">
-          <div class="w3ls_vegetables">
-            <ul class="dropdown-menu drp-mnu">
-              <li><a href="login.html">Login</a></li>
-              <li><a href="login.html">Sign Up</a></li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+        </form>
+    </div>
 
-  <div class="clearfix"></div>
+    <div class="product_list_header">
+        <form class="last">
+            <fieldset>
+<!--                <input name="cmd" type="hidden" value="_cart"/>-->
+<!--                <input name="display" type="hidden" value="1"/>-->
+                <input class="button" name="submit" type="submit" value="View your cart"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="w3l_header_right">
+        <ul>
+            <li class="dropdown profile_details_drop">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i aria-hidden="true" class="fa fa-user"></i><span class="caret"></span>
+                </a>
+                <div class="mega-dropdown-menu">
+                    <div class="w3ls_vegetables">
+                        <ul class="dropdown-menu drp-mnu">
+                            <li><a [routerLink]="['/home/login']">Login</a></li>
+                            <li><a [routerLink]="['/home/signup']">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="clearfix"></div>
 </div>
 <div class="clearfix"></div>
 
 
 <div class="logo_products">
-  <div class="container">
-    <div class="w3ls_logo_products_left">
-      <h1>
-        <a [routerLink]="['/home/dashboard']"><span>Grocery Logo</span>
-          Store</a></h1>
+    <div class="container">
+        <div class="w3ls_logo_products_left">
+            <h1>
+                <a [routerLink]="['/home/dashboard']"><span>Grocery Logo</span>
+                    Store</a></h1>
+        </div>
+        <div class="w3ls_logo_products_left1">
+            <ul class="special_items">
+                <li>
+                    <a [routerLink]="['/home/events']">Events</a><i>/</i>
+                </li>
+                <li><a [routerLink]="['/home/aboutus']">About
+                    Us</a><i>/</i></li>
+                <li><a [routerLink]="['/home/products']">Best Deals</a><i>/</i></li>
+                <li><a [routerLink]="['/home/services']">Services</a>
+                </li>
+            </ul>
+        </div>
+        <div class="w3ls_logo_products_left1">
+            <ul class="phone_email">
+                <li><i class="fa fa-phone"></i><a>9039363137</a></li>
+                <li><i class="fa fa-envelope"></i><a>admin@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="w3ls_logo_products_left1">
-      <ul class="special_items">
-        <li>
-          <a [routerLink]="['/home/events']">Events</a><i>/</i>
-        </li>
-        <li><a  [routerLink]="['/home/aboutus']">About
-          Us</a><i>/</i></li>
-        <li><a [routerLink]="['/home/spcl']">Best Deals</a><i>/</i></li>
-        <li><a [routerLink]="['/home/services']">Services</a>
-        </li>
-      </ul>
-    </div>
-    <div class="w3ls_logo_products_left1">
-      <ul class="phone_email">
-        <li><i class="fa fa-phone"></i><a>9039363137</a></li>
-        <li><i class="fa fa-envelope"></i><a>admin@gmail.com</a>
-        </li>
-      </ul>
-    </div>
-    <div class="clearfix"></div>
-  </div>
 </div>
 <!-- //header -->
 
@@ -80,115 +83,72 @@
 <!-- Aside Menu -->
 <div class="banner">
 
-  <div class="w3l_banner_nav_left">
-    <nav class="navbar nav_bottom">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header nav_2">
-        <button class="navbar-toggle collapsed navbar-toggle1" data-target="#bs-megadropdown-tabs"
-                data-toggle="collapse" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-        <ul class="nav navbar-nav nav_1">
-          <li>
-            <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/products.html">Branded
-              Foods</a>
-          </li>
-          <li>
-            <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/household.html">Households</a>
-          </li>
-          <li class="dropdown mega-dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Veggies &amp; Fruits<span
-              class="caret"></span>
-            </a>
-            <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-              <div class="w3ls_vegetables">
-                <ul>
-                  <li>
-                    <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/vegetables.html">Vegetables</a>
-                  </li>
-                  <li>
-                    <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/vegetables.html">Fruits</a>
-                  </li>
-                </ul>
-              </div>
+    <div class="w3l_banner_nav_left">
+        <nav class="navbar nav_bottom">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header nav_2">
+                <button class="navbar-toggle collapsed navbar-toggle1" data-target="#bs-megadropdown-tabs"
+                        data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-          </li>
-          <li><a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/kitchen.html">Kitchen</a>
-          </li>
-          <li><a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/short-codes.html">Short
-            Codes</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Beverages<span class="caret"></span></a>
-            <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-              <div class="w3ls_vegetables">
-                <ul>
-                  <li>
-                    <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/drinks.html">Soft
-                      Drinks</a></li>
-                  <li>
-                    <a
-                      href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/drinks.html">Juices</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/pet.html">Pet
-            Food</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="">Frozen Foods<span
-              class="caret"></span></a>
-            <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-              <div class="w3ls_vegetables">
-                <ul>
-                  <li>
-                    <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/frozen.html">Frozen
-                      Snacks</a></li>
-                  <li>
-                    <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/frozen.html">Frozen
-                      Nonveg</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/bread.html">Bread&amp;
-            Bakery</a></li>
-        </ul>
-      </div>
 
-    </nav>
-    <!-- ---Aside End------>
-  </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                <ul class="nav navbar-nav nav_1">
+                    <li *ngFor="let category of categories" class="dropdown">
+                        <a class="dropbtn">{{category.title}}
+<!--                             <span class="caret"></span>-->
+                        </a>
+                            <div class="dropdown-content">
+                                <a *ngFor="let subcategory of category.sub_categories">{{subcategory.title}}</a>
+                            </div>
 
+                    </li>
+
+                    <li>
+                        <a class="dropbtn">Category</a>
+                    </li>
+
+                    <li class="dropdown">
+                            <a class="dropbtn">New Category
+<!--                                <span class="caret"></span>-->
+                            </a>
+                            <div class="dropdown-content">
+                                <a>Sub-Category</a>
+                                <a>Sub-Category</a>
+                                <a>Sub-Category</a>
+                            </div>
+
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- ---Aside End------>
+    </div>
 
 
 </div>
 <!---728x90--->
 
 
-
-
-
-
 <!-- cart  -->
 
 <div id="PPMiniCart">
-  <form class="minicart-empty" method="post" target="">
-    <button class="minicart-closer" type="button">×</button>
-    <ul></ul>
-    <div class="minicart-footer">
-      <p class="minicart-empty-text">Your shopping cart is empty</p>
-    </div>
-    <input name="cmd" type="hidden" value="_cart">
-    <input name="upload" type="hidden" value="1">
-    <input name="bn" type="hidden" value="MiniCart_AddToCart_WPS_US">
-  </form>
+    <form class="minicart-empty" method="post" target="">
+        <button class="minicart-closer" type="button">×</button>
+        <ul></ul>
+        <div class="minicart-footer">
+            <p class="minicart-empty-text">Your shopping cart is empty</p>
+        </div>
+        <input name="cmd" type="hidden" value="_cart">
+        <input name="upload" type="hidden" value="1">
+        <input name="bn" type="hidden" value="MiniCart_AddToCart_WPS_US">
+    </form>
 </div>
 
 <!--</body>-->

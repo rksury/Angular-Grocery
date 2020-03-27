@@ -1,0 +1,91 @@
+<div class="w3l_banner_nav_right">
+
+    <div class="w3ls_w3l_banner_nav_right_grid">
+        <h3>Popular Brands</h3>
+
+
+        <div class="w3ls_w3l_banner_nav_right_grid1">
+            <!--					<h6 style="margin-left: 20px;">beverages</h6>-->
+            <div *ngFor="let product of products" class="col-md-3 w3ls_w3l_banner_left">
+                <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                        <div class="agile_top_brand_left_grid_pos">
+                            <img alt=" " class="img-responsive" src="../../../assets/Products/offer.png">
+                        </div>
+                        <div class="agile_top_brand_left_grid1">
+
+                            <form>
+                                <div class="snipcart-item block">
+                                    <div class="snipcart-thumb" style="text-align: center;">
+                                        <a>
+                                            <img src="{{product.image}}" style="height: 110px; width: 110px"></a>
+                                        <p style="color: #03a9f4;">{{product.item_name}}</p>
+                                        <h4>₹ <span> {{product.selling_price}}</span> {{product.final_price}}</h4>
+                                    </div>
+									<div style="text-align: center; margin-top: 10px">
+                                        <select id="select">
+                                            <option value="1" class="option_list" >1 kg</option>
+                                            <option value="2">500 gm</option>
+                                            <option value="3">250 gm</option>
+                                        </select>
+                                    </div>
+                                    <div class="snipcart-details">
+
+                                        <input class="button" name="submit" type="submit" value="Add to cart">
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 w3ls_w3l_banner_left">
+                <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                        <div class="agile_top_brand_left_grid_pos">
+                            <img alt=" " class="img-responsive" src="../../../assets/offer.png">
+                        </div>
+                        <div class="agile_top_brand_left_grid1">
+                            <figure>
+                                <div class="snipcart-item block">
+                                    <div class="snipcart-thumb">
+                                        <a href="https://p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/single.html">
+                                            <img alt=" " class="img-responsive"
+                                                 src="../../../assets/14.png"></a>
+                                        <p>prune juice - sunsweet (1 ltr)</p>
+                                        <h4>$4.00 <span>$5.00</span></h4>
+                                    </div>
+                                    <div class="snipcart-details">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input name="cmd" type="hidden" value="_cart">
+                                                <input name="add" type="hidden" value="1">
+                                                <input name="business" type="hidden" value=" ">
+                                                <input name="item_name" type="hidden" value="prune juice">
+                                                <input name="amount" type="hidden" value="4.00">
+                                                <input name="discount_amount" type="hidden" value="1.00">
+                                                <input name="currency_code" type="hidden" value="USD">
+                                                <input name="return" type="hidden" value=" ">
+                                                <input name="cancel_return" type="hidden" value=" ">
+                                                <input class="button" name="submit" type="submit" value="Add to cart">
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>

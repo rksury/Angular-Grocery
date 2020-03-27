@@ -9,6 +9,9 @@ import { EventsComponent } from './events/events.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurservicesComponent } from './ourservices/ourservices.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
     EventsComponent,
     AboutusComponent,
     OurservicesComponent,
+    ProductsComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     CommonModule,

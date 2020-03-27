@@ -1,16 +1,25 @@
 import {Component, OnInit} from '@angular/core';
+import {DashboardService} from './dashboard.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+    products = {};
 
-  constructor() {
-  }
+    constructor(private dashboardService: DashboardService) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
 
+        this.products_data();
+    }
+
+    products_data() {
+        this.dashboardService.all_products().subscribe(data => {
+            this.products = data;
+        });
+    }
 }

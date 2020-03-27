@@ -13,11 +13,11 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.all_products();
+        this.category_data();
     }
 
-    all_products() {
-        this.homeService.all_data().subscribe(data => {
+    category_data() {
+        this.homeService.all_category().subscribe(data => {
             this.categories = data;
         });
     }
