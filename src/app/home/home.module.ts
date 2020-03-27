@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -26,10 +27,12 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     SignupComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    HttpClientModule,
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ]
 })
 export class HomeModule { }

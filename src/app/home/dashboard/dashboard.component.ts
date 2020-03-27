@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DashboardService} from './dashboard.service';
+import { from } from 'rxjs';
 
 @Component({
     selector: 'app-dashboard',

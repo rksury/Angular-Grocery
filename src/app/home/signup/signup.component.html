@@ -3,26 +3,30 @@
     <!---728x90--->
 
 
-        <div class="module form-module">
-            <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-                <!--					<div class="tooltip">Click Me</div>-->
-            </div>
-            <div class="form" style="display: block;">
-                <h2>Create an account</h2>
-                <form>
-                    <input name="name" placeholder="Full Name" required=" " type="text">
-                    <input name="username" placeholder="Username" required=" " type="text">
-                    <input name="email" placeholder="E-mail" required=" " type="email">
-                    <input name="number" placeholder="+91" required=" " type="text">
-                    <input name="Password" placeholder="Password" required=" " type="password">
-                    <input type="submit" value="Signup">
-                </form>
-            </div>
+    <div class="module form-module">
+        <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+        </div>
+
+        <div class="form" style="display: block;">
+            <h2>Create an account</h2>
+            <form (ngSubmit)="onSubmit()" [formGroup]="submitform">
+                <div class="form-field">
+                    <input formControlName="name" placeholder="Full Name" required=" " type="text">
+                    <input formControlName="username" placeholder="Username" required=" " type="text">
+                    <input formControlName="email" placeholder="E-mail" required=" " type="email">
+                    <input formControlName="number" placeholder="+91" required=" " type="text">
+                    <input formControlName="text" placeholder="Password" required=" " type="password">
+                    <input [disabled]="!submitform.valid" type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
 
 
-            <div class="submit_btn">
-               <input [routerLink]="['/home/login']" type="submit" value="Login" name="submit" style="background-color:#343434; font-size: 20px; height: 30px; padding: 0px;" >
-                 </div>
+        <div class="submit_btn">
+            <input [routerLink]="['/home/login']" name="submit"
+                   style="background-color:#343434; font-size: 20px; height: 30px; padding: 0px;" type="submit"
+                   value="Login">
         </div>
     </div>
+</div>
 
