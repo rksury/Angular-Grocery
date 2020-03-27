@@ -86,7 +86,12 @@ i.badge.badge-notify.my-cart-badge {
     top: 1em;
 }
 
-input[type="submit"], #PPMiniCart .minicart-submit, .w3ls_vegetables ul li a, input[type="reset"], .agileinfo_mail_grid_left ul li a, .events_bottom_left2 ul li a, .w3ls_service_grids1_right a, ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_banner_nav_right_grid_head_grid ul li a, .products-breadcrumb ul li a, .w3_footer_grid ul li a, .w3l_fresh_vegetables_grid ul li a, .wthree_footer_copy p a, .agile_top_brand_left_grid1 .button, .w3ls_logo_products_left1 ul.special_items li a, .w3ls_logo_products_left1 ul.phone_email li a {
+input[type="submit"], #PPMiniCart .minicart-submit, .w3ls_vegetables ul li a, input[type="reset"],
+.agileinfo_mail_grid_left ul li a, .events_bottom_left2 ul li a, .w3ls_service_grids1_right a,
+ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_banner_nav_right_grid_head_grid ul li a,
+.products-breadcrumb ul li a, .w3_footer_grid ul li a, .w3l_fresh_vegetables_grid ul li a, .wthree_footer_copy p a,
+.agile_top_brand_left_grid1 .button, .w3ls_logo_products_left1 ul.special_items li a,
+.w3ls_logo_products_left1 ul.phone_email li a {
     transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
     -moz-transition: .5s ease-in;
@@ -103,12 +108,17 @@ input[type="submit"], #PPMiniCart .minicart-submit, .w3ls_vegetables ul li a, in
 }
 
 .w3l_offers a {
-    font-size: 1.2em;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     padding: .5em 3em;
     background: #84C639;
     display: block;
+}
+
+.w3l_offers a:hover {
+    font-size: 18px;
+    background: #03a9f4;
 }
 
 .w3l_search {
@@ -124,21 +134,22 @@ input[type="submit"], #PPMiniCart .minicart-submit, .w3ls_vegetables ul li a, in
     font-size: 14px;
     width: 85%;
     background: #fff;
-    border: 1px solid #999;
+    border: 1px solid #8bc34a;
     float: left;
+
 }
 
 .w3l_search input[type="submit"] {
     outline: none;
     padding: 10px 0 9px;
     width: 15%;
-    border: 1px solid;
+    border: 1px solid #03a9f4;
     position: relative;
-    background: url(../images/img-sp.png) no-repeat 14px 5px #03a9f4;
+    background: url('../assets/search-black.svg') no-repeat 16px 10px #8bc34a;
 }
 
 .w3l_search input[type="submit"]:hover {
-    background: url(../images/img-sp.png) no-repeat 14px 5px #84C639;
+    background: url('../assets/search-black.svg') no-repeat 16px 10px #03a9f4;
 }
 
 .w3l_header_right {
@@ -152,6 +163,7 @@ input[type="submit"], #PPMiniCart .minicart-submit, .w3ls_vegetables ul li a, in
 
 .w3l_header_right1 {
     float: right;
+     background: url('../assets/person.svg') no-repeat 16px 10px;
 }
 
 .w3l_header_right1 h2 a {
@@ -219,7 +231,9 @@ ul.dropdown-menu.drp-mnu li a i {
 
 .w3ls_logo_products_left1 {
     float: left;
-    margin-top: 2.3em;
+    margin-top: 2em;
+    /*border: 1px solid red;*/
+    /*background-color: #03a9f4;*/
 }
 
 .w3ls_logo_products_left1 ul.phone_email li {
@@ -232,6 +246,7 @@ ul.dropdown-menu.drp-mnu li a i {
 
 .w3ls_logo_products_left1 ul.phone_email li a {
     color: #212121;
+    /*font-size: 15px;*/
     text-decoration: none;
 }
 
@@ -2121,7 +2136,7 @@ a.pa_italic:focus {
 }
 
 .services-bottom {
-    background: url('../assets/2.png') no-repeat 0px 0px;
+    background: url('../assets/banner2.jpg') no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -3653,7 +3668,7 @@ ul.wmuSliderPagination {
     }
 
     .w3ls_logo_products_left1 {
-        margin-top: 1.6em;
+        margin-top: 1em;
     }
 
     .navbar-nav > li > a {

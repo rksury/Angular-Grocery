@@ -8,20 +8,19 @@
     <div class="w3l_search">
         <form>
 
-            <input name="Product" required=" " type="text" placeholder="Search Products....">
-<!--            <span class="material-icons">search</span>-->
+            <input name="Product" placeholder="Search Products...." required=" " type="text">
+            <!--            <span class="material-icons">search</span>-->
             <input class="search_icon" type="submit" value=" ">
 
         </form>
     </div>
 
     <div class="product_list_header">
-        <form class="last">
-            <fieldset>
-<!--                <input name="cmd" type="hidden" value="_cart"/>-->
-<!--                <input name="display" type="hidden" value="1"/>-->
-                <input class="button" name="submit" type="submit" value="View your cart"/>
-            </fieldset>
+        <form>
+
+                <!--                <input name="cmd" type="hidden" value="_cart"/>-->
+                <!--                <input name="display" type="hidden" value="1"/>-->
+                <input [routerLink]="['/home/cart']" class="button" name="submit" type="submit" value="View your cart"/>
         </form>
     </div>
 
@@ -57,18 +56,19 @@
         </div>
         <div class="w3ls_logo_products_left1">
             <ul class="special_items">
-                <li>
-                    <a [routerLink]="['/home/events']" routerLinkActive="active">Events</a><i>/</i>
-                </li>
-                <li><a [routerLink]="['/home/aboutus']" routerLinkActive="active">About
-                    Us</a><i>/</i></li>
-                <li><a [routerLink]="['/home/products']" routerLinkActive="active">Best Deals</a><i>/</i></li>
-                <li><a [routerLink]="['/home/services']" routerLinkActive="active">Services</a>
-                </li>
+
+                <li><a [routerLink]="['/home/products']" routerLinkActive="active">Best Deals</a>
+                    <i>/</i></li>
+                 <li><a [routerLink]="['/home/services']" routerLinkActive="active">Services</a> <i>/</i></li>
+                <li><a [routerLink]="['/home/aboutus']" routerLinkActive="active">About Us</a></li>
+
             </ul>
         </div>
+
+
         <div class="w3ls_logo_products_left1">
             <ul class="phone_email">
+                <li></li>
                 <li><i class="fa fa-phone"></i><a>9039363137</a></li>
                 <li><i class="fa fa-envelope"></i><a>admin@gmail.com</a>
                 </li>
@@ -100,31 +100,35 @@
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
                     <li *ngFor="let category of categories" class="dropdown">
-                        <a class="dropbtn" >{{category.title}}
-<!--                             <span class="caret"></span>-->
+                        <a class="dropbtn">{{category.title}}
                         </a>
-                            <div class="dropdown-content">
-                                <a [routerLink]="['/home/products']" [queryParams]="{ category:subcategory.id }" *ngFor="let subcategory of category.sub_categories">{{subcategory.title}}</a>
-                            </div>
+
+                        <div class="dropdown-content">
+                            <a *ngFor="let subcategory of category.sub_categories"
+                               [queryParams]="{ category:subcategory.id }"
+                               [routerLink]="['/home/products']">{{subcategory.title}}</a>
+
+                        </div>
 
                     </li>
 
-                    <li>
-                        <a class="dropbtn">Category</a>
-                    </li>
 
-                    <li class="dropdown">
-                            <a class="dropbtn">New Category
-<!--                                <span class="caret"></span>-->
-                            </a>
-                            <div class="dropdown-content">
-                                <a>Sub-Category</a>
-                                <a>Sub-Category</a>
-                                <a>Sub-Category</a>
-                            </div>
-
-                    </li>
                 </ul>
+<!--                <div>-->
+<!--                    <ul class="accordion" id="accordion">-->
+<!--                        <li>-->
+<!--                            <div class="link_link"><i class="fa fa-database"></i>Web Design<i class="fa fa-chevron-down"></i>-->
+<!--                            </div>-->
+<!--                            <ul class="submenu_submenu">-->
+<!--                                <li><a href="#">Photoshop</a></li>-->
+<!--                                <li><a href="#">HTML</a></li>-->
+<!--                                <li><a href="#">CSS</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li>-->
+
+<!--                    </ul>-->
+<!--                </div>-->
             </div>
 
         </nav>
