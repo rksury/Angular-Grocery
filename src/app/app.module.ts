@@ -1,5 +1,4 @@
 import {BrowserModule} from '@angular/platform-browser';
-// import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -18,7 +17,6 @@ import {HomeModule} from './home/home.module';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    // HttpClientModule,
 
     HomeModule
   ],
