@@ -12,7 +12,7 @@ export class ProductsService {
     }
 
     all_products(params?: any) {
-        if (params) {
+        {
             console.log(params);
         }
         return this.httpClient.get(this.baseurl + 'product/', {params});

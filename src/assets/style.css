@@ -525,7 +525,7 @@ ul.dropdown-menu.drp-mnu li a i {
 
 .wthree_banner_bottom_left_grid_pos h4 {
     font-size: 1.5em;
-    color: #000000;
+    color: #03a9f4;
 }
 
 .wthree_banner_bottom_left_grid_pos h4 span {
@@ -533,7 +533,7 @@ ul.dropdown-menu.drp-mnu li a i {
     line-height: 1;
     width: 80px;
     height: 80px;
-    background: #03a9f4;
+    background: #ac2925;
     color: #fff;
     border-radius: 50px;
     text-align: center;
@@ -942,7 +942,7 @@ ul.dropdown-menu.drp-mnu li a i {
 }
 
 .agileinfo_marquee h4 span {
-    color: #03a9f4;
+    color: red;
 }
 
 /*-- //top-products --*/
@@ -1410,7 +1410,7 @@ ul.dropdown-menu.drp-mnu li a i {
 }
 
 .view-tenth .mask {
-    background-color: #03a9f4;
+    background-color: red;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;

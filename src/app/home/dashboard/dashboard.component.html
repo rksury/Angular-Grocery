@@ -84,7 +84,7 @@
             <div class="wthree_banner_bottom_left_grid">
                 <img alt=" " class="img-responsive" src="../../../assets/6.jpg">
                 <div class="wthree_banner_btm_pos1">
-                    <h3>Save <span>Upto</span> $10</h3>
+                    <h3>Save <span>Upto</span> 10%</h3>
                 </div>
             </div>
         </div>
@@ -111,14 +111,16 @@
                             <img alt=" " class="img-responsive" src="../../../assets/tag.png"></div>
                         <div class="agile_top_brand_left_grid1">
 
-                          <form>
+                          <form >
 
                                 <div class="snipcart-item block">
                                     <div class="snipcart-thumb" style="text-align: center; margin-top: 10px;">
                                         <a>
                                             <img src="{{product.image}}" style="height: 100px; width: 100px"></a>
-                                        <p style="color: #03a9f4;">{{product.item_name}}</p>
-                                        <h4>₹ <span> {{product.selling_price}}</span>   {{product.final_price}}</h4>
+                                        <p  style="color: #03a9f4;">{{product.item_name}}</p>
+                                       <h4>₹ <span> {{product.selling_price}}</span>
+                                            <b style="color: #03a9f4;"> &nbsp; {{product.final_price}}</b>
+                                        </h4>
                                     </div>
 <!--                                    <div style="text-align: center; margin-top: 10px">-->
 <!--                                        <select id="select">-->
@@ -156,22 +158,20 @@
             <div class="col-md-3 w3l_fresh_vegetables_grid w3l_fresh_vegetables_grid_left">
                 <div class="w3l_fresh_vegetables_grid2">
                     <ul>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>All Brands</a></li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Vegetables</a>
+                        <li><a>⚫ &nbsp; All Brands</a></li>
+                        <li><a>⚫ &nbsp; Vegetables</a>
                         </li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Fruits</a>
+                        <li><a>⚫ &nbsp; Fruits</a>
                         </li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Juices</a>
+                        <li><a>⚫ &nbsp; Juices</a>
                         </li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Pet Food</a></li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Bread & Bakery</a></li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a
-                               >Cleaning</a>
+                        <li><a>⚫ &nbsp; Bread & Bakery</a></li>
+                        <li><a>⚫ &nbsp; Cleaning</a>
                         </li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Spices</a>
+                        <li><a>⚫ &nbsp; Spices</a>
                         </li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Dry Fruits</a></li>
-                        <li><i aria-hidden="true" class="fa fa-check"></i><a>Dairy Products</a></li>
+                        <li><a>⚫ &nbsp; Dry Fruits</a></li>
+                        <li><a>⚫ &nbsp; Dairy Products</a></li>
                     </ul>
                 </div>
             </div>
@@ -251,17 +251,13 @@
         <div class="col-md-3 w3_footer_grid">
             <h3>information</h3>
             <ul class="w3_footer_grid_list">
-                <li>
-                    <a [routerLink]="['/home/events']">Events</a>
-                </li>
-                <li><a [routerLink]="['/home/aboutus']">About
+                <li><a [routerLink]="['/home/aboutus']">⚪ &nbsp; About
                     Us</a></li>
-                <li><a [routerLink]="['/home/products']">Best
+                <li><a [routerLink]="['/home/products']">⚪ &nbsp; Best
                     Deals</a></li>
-                <li><a [routerLink]="['/home/ourservices']">Services</a>
+                <li><a [routerLink]="['/home/ourservices']">⚪ &nbsp; Services</a>
                 </li>
-                <li><a >Short
-                    Codes</a></li>
+
             </ul>
         </div>
 
@@ -269,12 +265,9 @@
         <div class="col-md-3 w3_footer_grid">
             <h3>policy info</h3>
             <ul class="w3_footer_grid_list">
-                <li><a >FAQ</a>
-                </li>
-                <li><a >privacy
-                    policy</a></li>
-                <li><a >terms of
-                    use</a></li>
+                <li><a >⚪ &nbsp; FAQ</a></li>
+                <li><a >⚪ &nbsp; privacy policy</a></li>
+                <li><a >⚪ &nbsp; terms of use</a></li>
             </ul>
         </div>
 
@@ -282,12 +275,19 @@
             <h3>what in stores</h3>
             <ul class="w3_footer_grid_list">
 
-                <li><a >Pet Food</a></li>
-                <li><a >Frozen Snacks</a></li>
-                <li><a >Kitchen</a></li>
-                <li><a >Branded Foods</a></li>
-                <li><a >Households</a></li>
+                <li><a>⚪ &nbsp; Frozen Snacks</a></li>
+                <li><a >⚪ &nbsp; Kitchen</a></li>
+                <li><a >⚪ &nbsp; Branded Foods</a></li>
+                <li><a >⚪ &nbsp; Households</a></li>
 
+            </ul>
+        </div>
+
+        <div class="col-md-3 w3_footer_grid">
+            <h3>Contact us</h3>
+            <ul class="w3_footer_grid_list">
+                <li><a>⚪ &nbsp; 9039363137</a></li>
+                <li><a>⚪ &nbsp; admin@gmail.com</a></li>
             </ul>
         </div>
 
@@ -299,8 +299,8 @@
                     <img alt=" " class="img-responsive" src="../../../assets/card.png">
                 </div>
             </div>
-
         </div>
+
     </div>
 </div>
 <!-- //footer -->

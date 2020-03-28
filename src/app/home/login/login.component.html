@@ -1,30 +1,31 @@
-
 <div class="w3_login">
-		<h2 style="margin-left: 45%">Sign In </h2>
-<!---728x90--->
+    <h2 style="margin-left: 45%">Sign In </h2>
+    <!---728x90--->
 
-			<div class="w3_login_module">
-				<div class="module form-module">
-				  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-<!--					<div class="tooltip">Click Me</div>-->
-				  </div>
-				  <div class="form" style="display: block;">
-					<h2>Login to your account</h2>
-					<form [formGroup]="submitform" (ngSubmit)="onSubmit()">
-						<div class="form-field">
-					  <input type="text" formControlName="username" formGroupName placeholder="username" required=" ">
-					  <input type="text" formControlName="password" formGroupName placeholder="password" required=" ">
-					  <input type="submit" value="Login" [disabled]="!submitform.valid">
-							</div>
-					</form>
-				  </div>
+    <div class="w3_login_module">
+        <div class="module form-module">
+            <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+                <!--					<div class="tooltip">Click Me</div>-->
+            </div>
+            <div class="form" style="display: block;">
+                <h2>Login to your account</h2>
 
-				  <div class="submit_btn">
-            <input [routerLink]="['/home/signup']"
-                   style="background-color:#343434; font-size: 20px; height: 30px; padding: 0px;" type="submit"
-                   value="Signup">
+                <form (ngSubmit)="onSubmit()" [formGroup]="submitform">
+                    <div class="form-field">
+                        <input formControlName="username" formGroupName placeholder="username" required="" type="text">
+                        <input formControlName="password" formGroupName placeholder="password" required="" type="password">
+                        <input [disabled]="!submitform.valid" type="submit" value="Login">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="submit_btn">
+                <input [routerLink]="['/home/signup']"
+                       style="background-color:#343434; font-size: 20px; height: 30px; padding: 0px;" type="submit"
+                       value="Signup">
+            </div>
         </div>
-				</div>
-			</div>
+    </div>
 
-		</div>
+</div>

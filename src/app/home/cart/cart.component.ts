@@ -30,14 +30,14 @@ export class CartComponent implements OnInit {
     }
 
     getCart() {
-        this.cartService.getCart().subscribe(
-            data => {
+        this.cartService.getCart().subscribe(data => {
                 this.cart = data;
                 this.products = this.cart.products;
                 console.log(this.cart.products);
-            }, error => {
-                // this.utils.presentToast('Some Error Occurred');
-            }
+            },
+            // error => {
+            // this.utils.presentToast('Some Error Occurred');
+            // }
         );
     }
 
