@@ -1,0 +1,10 @@
+.submit_btn{
+     background: #343434;
+    width: 100%;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    /*height: 60px;*/
+
+}
