@@ -4836,7 +4836,9 @@ ul.wmuSliderPagination {
     }
 
     table.table {
-        width: 100%;
+        width: 80%;
+        float: right;
+
     }
 
     .product_list_header {

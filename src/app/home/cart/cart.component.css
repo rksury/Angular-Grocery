@@ -1,0 +1,76 @@
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+    color: #03a9f4;
+    /*text-align: center;*/
+}
+
+.hr_row{
+    border:1px solid #BEBEBE;
+    width: 95%;
+}
+
+
+media {
+  margin-top: 50px;
+}
+.media:first-child {
+  margin-top: 0;
+}
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-body {
+  width: 10000px;
+}
+.media-object {
+  display: block;
+}
+.media-right,
+.media > .pull-right {
+  padding-left: 10px;
+}
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+.media-middle {
+  vertical-align: middle;
+}
+.media-bottom {
+  vertical-align: bottom;
+}
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+ /*<link rel="icon" href="img/favicon.png">*/
+ /*   <!-- Bootstrap CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/bootstrap.min.css">*/
+ /*   <!-- animate CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/animate.css">*/
+ /*   <!-- owl carousel CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">*/
+ /*   <!-- font awesome CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/all.css">*/
+ /*   <!-- icon CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/flaticon.css">*/
+ /*   <link rel="stylesheet" href="assets/css/themify-icons.css">*/
+ /*   <!-- magnific popup CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/magnific-popup.css">*/
+ /*   <link rel="stylesheet" href="assets/css/nice-select.css">*/
+ /*   <!-- style CSS -->*/
+ /*   <link rel="stylesheet" href="assets/css/style.css">*/
