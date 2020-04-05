@@ -100,31 +100,36 @@ ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_ban
 }
 
 .agileits_header {
-    background: #212121;
+    background: #84C639;
 }
 
 .w3l_offers {
     float: left;
+
+
 }
 
 .w3l_offers a {
-    font-size: 18px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
-    padding: .5em 3em;
-    background: #84C639;
     display: block;
+    text-align: center;
 }
 
 .w3l_offers a:hover {
-    font-size: 18px;
-    background: #03a9f4;
+    font-size: 17px;
+    color: white;
+
+
+
 }
 
 .w3l_search {
     float: left;
-    width: 27%;
+    width: 30%;
     margin: .1em 0 0em 10em;
+    /*margin-left: -80px;*/
 }
 
 .w3l_search input[type="text"] {
@@ -163,7 +168,7 @@ ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_ban
 
 .w3l_header_right1 {
     float: right;
-     background: url('../assets/person.svg') no-repeat 16px 10px;
+    background: url('../assets/person.svg') no-repeat 16px 10px;
 }
 
 .w3l_header_right1 h2 a {
@@ -305,7 +310,7 @@ ul.dropdown-menu.drp-mnu li a i {
 .w3l_banner_nav_left {
     float: left;
     /*-- agileits --*/
-    width: 20%;
+    width: 18%;
     background: #f5f5f5;
 }
 
@@ -3000,17 +3005,16 @@ ul.wmuSliderPagination {
 
     .w3l_search {
         margin: .1em 0 0em 3em;
-        width: 30%;
+
     }
 
-    .w3l_search input[type="submit"] {
-        background: url(../images/img-sp.png) no-repeat 6px 5px #8bc34a;
-    }
-
-    .w3l_search input[type="submit"]:hover {
-        background: url(../images/img-sp.png) no-repeat 6px 5px #03a9f4;
-    }
-
+    /*.w3l_search input[type="submit"] {*/
+    /*    background: url(../images/img-sp.png) no-repeat 6px 5px #8bc34a;*/
+    /*    */
+    /*}*/
+    /*.w3l_search input[type="submit"]:hover {*/
+    /*    background: url(../images/img-sp.png) no-repeat 6px 5px #03a9f4;*/
+    /*}*/
     .product_list_header {
         margin-left: 2em;
     }
@@ -3750,6 +3754,7 @@ ul.wmuSliderPagination {
 
     .typo, .privacy, .faq, .services, .events, .mail, .agileinfo_single, .w3_login {
         padding: 3em 2em;
+
     }
 
     .w3l_banner_nav_right_banner_pet a, .w3ls_service_grids1_right a {
@@ -4558,7 +4563,7 @@ ul.wmuSliderPagination {
     .product_list_header input.button {
         margin: 0;
         padding: .3em 2.5em .3em 1em;
-        background: url(../images/cart.png) no-repeat 116px 5px;
+        /*background: url('../assets/card.png') no-repeat 116px 5px;*/
     }
 
     #PPMiniCart form {

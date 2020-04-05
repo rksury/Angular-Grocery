@@ -20,4 +20,12 @@
 
 .hr_row{
     border:10px solid #F5F5F5;
+     /*margin-right: 20px;*/
+
+}
+
+.hr_row_banner{
+    border:10px solid white;
+     margin-right: 15px;
+
 }

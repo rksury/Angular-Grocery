@@ -1,7 +1,9 @@
 <!------------ Main banner---------- -->
 <div class="banner">
 <div class="w3l_banner_nav_right">
+
     <section class="slider">
+
         <div class="flexslider">
 
             <div class="flex-viewport" style="overflow: hidden; position: relative;">
@@ -38,6 +40,8 @@
                     </li>
                 </ul>
             </div>
+
+
             <ol class="flex-control-nav flex-control-paging">
                 <li><a class="">1</a></li>
                 <li><a class="">2</a></li>
@@ -49,6 +53,7 @@
             </ul>
         </div>
     </section>
+
 </div>
 </div>
 
@@ -59,9 +64,11 @@
 <!-- Secondary banner -->
 
 <div class="banner_bottom">
+
     <div class="wthree_banner_bottom_left_grid_sub"></div>
 
     <div class="wthree_banner_bottom_left_grid_sub1">
+
         <div class="col-md-4 wthree_banner_bottom_left">
 
             <div class="wthree_banner_bottom_left_grid">
@@ -72,7 +79,9 @@
                 </div>
             </div>
         </div>
+
         <div class="col-md-4 wthree_banner_bottom_left">
+
             <div class="wthree_banner_bottom_left_grid">
                 <img alt=" " class="img-responsive" src="../../../assets/5.jpg">
                 <div class="wthree_banner_btm_pos">
@@ -80,6 +89,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-md-4 wthree_banner_bottom_left">
             <div class="wthree_banner_bottom_left_grid">
                 <img alt=" " class="img-responsive" src="../../../assets/6.jpg">
@@ -88,51 +98,38 @@
                 </div>
             </div>
         </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
 
-<!---728x90--->
-<!-- End Secondary banner -->
+        <hr class="hr_row_banner">
 
-<!-- Hot-Offers -->
+        <!-- Hot-Offers -->
 
 <div class="top-brands">
-    <div class="container">
+
         <h3>Hot Offers</h3>
         <!---728x90--->
-        <div class="agile_top_brands_grids">
+        <div class="agile_top_brands_grids" >
 
-            <div *ngFor="let product of products" class="col-md-3 top_brand_left">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="tag">
-                            <img alt=" " class="img-responsive" src="../../../assets/tag.png"></div>
+            <div *ngFor="let product of products" class="col-md-3 top_brand_left" >
+                <div class="hover14 column" >
+                    <div class="agile_top_brand_left_grid" >
+                        <div class="tag" >
+                            <img alt=" " class="img-responsive" src="../../../assets/tag.png">
+                        </div>
                         <div class="agile_top_brand_left_grid1">
 
-                          <form >
-
+                          <form>
                                 <div class="snipcart-item block">
                                     <div class="snipcart-thumb" style="text-align: center; margin-top: 10px;">
                                         <a>
                                             <img src="{{product.image}}" style="height: 100px; width: 100px"></a>
-                                        <p  style="color: #03a9f4;">{{product.item_name}}</p>
+                                        <p  style="color: #03a9f4; height:50px;">{{product.item_name}}</p>
                                        <h4>₹ <span> {{product.selling_price}}</span>
                                             <b style="color: #03a9f4;"> &nbsp; {{product.final_price}}</b>
                                         </h4>
                                     </div>
-<!--                                    <div style="text-align: center; margin-top: 10px">-->
-<!--                                        <select id="select">-->
-<!--                                            <option value="1" class="option_list" >1 kg</option>-->
-<!--                                            <option value="2">500 gm</option>-->
-<!--                                            <option value="3">250 gm</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
+
                                     <div class="snipcart-details top_brand_home_details">
-
                                         <input class="button" name="submit" type="submit" value="Add to cart">
-
                                     </div>
                                 </div>
                               </form>
@@ -144,13 +141,12 @@
 
             <div class="clearfix"></div>
         </div>
-    </div>
+
 </div>
 
 <!-- //Hot Offer- -->
 
-
-<!-- fresh-vegetables -->
+        <!-- fresh-vegetables -->
 <div class="fresh-vegetables">
     <div class="container">
         <h3>Top Products</h3>
@@ -226,26 +222,7 @@
 </div>
 <!-- //fresh-vegetables -->
 
-
-<!-- newsletter -->
-<div class="newsletter">
-    <div class="container">
-        <div class="w3agile_newsletter_left">
-            <h3>sign up for our newsletter</h3>
-        </div>
-        <div class="w3agile_newsletter_right">
-            <form >
-                <input name="Email" required="" type="email" placeholder=" E-mail" value="">
-                <input type="submit" value="subscribe now">
-            </form>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-
-<!-- //newsletter -->
-
-<!-- footer -->
+        <!-- footer -->
 <div class="footer">
     <div class="container">
         <div class="col-md-3 w3_footer_grid">
@@ -291,16 +268,22 @@
             </ul>
         </div>
 
-        <!--    <div class="col-md-3 w3_footer_grid">-->
-        <div class="agile_footer_grids">
-            <div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
-                <div class="w3_footer_grid_bottom">
-                    <h4>100% secure payments</h4>
-                    <img alt=" " class="img-responsive" src="../../../assets/card.png">
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 <!-- //footer -->
+
+
+    </div>
+</div>
+
+<!---728x90--->
+<!-- End Secondary banner -->
+
+
+
+
+
+
+
+
+

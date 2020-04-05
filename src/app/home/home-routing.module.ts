@@ -10,6 +10,7 @@ import {ProductsComponent} from './products/products.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
 import {CartComponent} from './cart/cart.component';
+import {OrderhistoryComponent} from './orderhistory/orderhistory.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,7 @@ const routes: Routes = [
             {path: 'services', component: OurservicesComponent},
             {path: 'products', component: ProductsComponent},
             {path: 'cart', component: CartComponent },
+            {path: 'history', component: OrderhistoryComponent },
             {path: 'product/:id', component: ProductsComponent },
 
             {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},

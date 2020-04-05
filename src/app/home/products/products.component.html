@@ -1,10 +1,8 @@
 <div class="w3l_banner_nav_right">
 
     <div class="w3ls_w3l_banner_nav_right_grid">
-        <h3>Popular Brands</h3>
 
-        <div class="w3ls_w3l_banner_nav_right_grid1">
-<!--            <h6 style="margin-left: 20px;">beverages</h6>-->
+        <div class="w3ls_w3l_banner_nav_right_grid1" style="margin-top: -10px;">
 
             <div *ngFor="let product of products" class="col-md-3 w3ls_w3l_banner_left">
                 <div class="hover14 column">
@@ -19,18 +17,11 @@
                                     <div class="snipcart-thumb" style="text-align: center;">
                                         <a>
                                             <img  src="{{product.image}}" style="height: 110px; width: 110px"></a>
-                                        <p  style="color: #03a9f4;">{{product.item_name}}</p>
+                                        <p  style="color: #03a9f4; height:50px;">{{product.item_name}}</p>
                                         <h4>₹ <span> {{product.selling_price}}</span>
                                             <b style="color: #03a9f4;"> &nbsp; {{product.final_price}}</b>
                                         </h4>
                                     </div>
-<!--									<div style="text-align: center; margin-top: 10px">-->
-<!--                                        <select id="select">-->
-<!--                                            <option value="1" class="option_list" >1 kg</option>-->
-<!--                                            <option value="2">500 gm</option>-->
-<!--                                            <option value="3">250 gm</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
                                     <div class="snipcart-details">
 
                                         <input class="button" name="submit" type="submit" value="Add to cart">
@@ -44,43 +35,6 @@
                 </div>
                 <div class="hr_row"></div>
             </div>
-
-
-            <div class="col-md-3 w3ls_w3l_banner_left">
-                <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-                        <div class="agile_top_brand_left_grid_pos">
-                            <img alt=" " class="img-responsive" src="../../../assets/offer.png">
-                        </div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block">
-                                    <div class="snipcart-thumb" style="text-align: center;">
-                                        <a>
-                                            <img alt=" " class="img-responsive"
-                                                 src="../../../assets/14.png"></a>
-                                        <p>prune juice - sunsweet (1 ltr)</p>
-                                        <h4>₹ <span>45.00 </span> <b style="color: #03a9f4;"> &nbsp; 40.00</b></h4>
-                                    </div>
-                                    <div class="snipcart-details">
-                                         <form [formGroup]="submitform" (ngSubmit)="onSubmit()">
-                                            <div class="form-field">
-                                                <input formControlName="add" type="hidden" value="1">
-                                                <input formControlName="item_name" type="hidden" value="prune juice">
-                                                <input formControlName="amount" type="hidden" value="4.00">
-                                                <input formControlName="discount_amount" type="hidden" value="1.00">
-                                                <input class="button" name="submit" type="submit" value="Add to cart">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clearfix"></div>
         </div>
     </div>
 </div>

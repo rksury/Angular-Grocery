@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CartComponent } from './cart/cart.component';
     LoginComponent,
     SignupComponent,
     CartComponent,
+    OrderhistoryComponent,
   ],
     imports: [
         CommonModule,
