@@ -2,25 +2,20 @@
 <div class="agileits_header">
 
     <div class="w3l_offers company_logo">
-        <img [routerLink]="['/home/dashboard']" src="../../assets/logo.png"
+        <img [routerLink]="['/']" src="../../assets/logo.png"
              style="width: 100px; height:50px; margin-left: 50px;" title="Home">
     </div>
-    <div class="down w3l_offers " >
-        <!--            <button class="drop" onclick="myFunction()">Dropdown<span class="caret"></span></button>-->
-        <!--            <div class="down-content" id="myDropdown">-->
-        <!--                <a >Home</a>-->
-        <!--                <a >About</a>-->
-        <!--                <a >Contact</a>-->
-        <!--            </div>-->
-        <select class="select_select">
-            <option  class="option" value="city">Select city</option>
-            <option  class="option" value="indore">indore</option>
-            <option  class="option" value="Dewas">Dewas</option>
-            <option  class="option" value="Ujjain">Ujjain</option>
-        </select>
+    <div class="down w3l_offers ">
+        <button class="drop" onclick="myFunction1()" >{{selectedCity}} <span class="caret"></span></button>
+        <div class="down-content" id="myDropdown1">
+            <a (click)="onChangeCity('Indore')">Indore</a>
+            <a (click)="onChangeCity('Dewas')">Dewas</a>
+            <a (click)="onChangeCity('Ujjain')">Ujjain</a>
+        </div>
     </div>
     <div class="w3l_offers" style="margin-top: 16px; width: 150px;">
-        <a [routerLink]="['/home/products']" style=" border-radius: 5px;"> Special Offers !</a>
+        <a [routerLink]="['/products']" style=" border-radius: 5px;"
+           title="Click Now for Get Offer "> Special Offers !</a>
     </div>
 
     <div class="w3l_search">
@@ -32,7 +27,7 @@
 
     <div class="product_list_header" style="margin-left: -20px;">
         <form>
-            <div [routerLink]="['/home/cart']" class="cart_bar ">
+            <div [routerLink]="['/cart']" class="cart_bar ">
                 <a class="cart_a" type="hidden">View Cart</a> &nbsp;
                 <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 20px;"></i>
             </div>
@@ -44,13 +39,14 @@
         <ul>
             <li class="dropdown profile_details_drop">
                 <a class="dropdown-toggle" data-toggle="dropdown">
-                    <i aria-hidden="true" class="fa fa-user" style="font-size: 20px">&nbsp;</i><span class="caret"></span>
+                    <i aria-hidden="true" class="fa fa-user" style="font-size: 20px">&nbsp;</i><span
+                        class="caret"></span>
                 </a>
                 <div class="mega-dropdown-menu">
                     <div class="w3ls_vegetables">
                         <ul class="dropdown-menu drp-mnu">
-                            <li><a [routerLink]="['/home/login']">Login</a></li>
-                            <li><a [routerLink]="['/home/signup']">Sign Up</a></li>
+                            <li><a [routerLink]="['/login']">Login</a></li>
+                            <li><a [routerLink]="['/signup']">Sign Up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,10 +54,10 @@
         </ul>
     </div>
     <div class="w3l_header_right" style="margin-top: 18px; color: white; font-size: 15px; margin-left: -50px; ">
-                <b>Admin </b>
+        <b>Admin </b>
     </div>
     <div class="w3l_header_right">
-         <i [routerLink]="['/home/login']" class="fa fa-sign-out log_out" title="log out "></i>
+        <i  [routerLink]="['/home/dashboard']" class="fa fa-sign-out log_out" title="log out "></i>
     </div>
     <div class="clearfix"></div>
 </div>

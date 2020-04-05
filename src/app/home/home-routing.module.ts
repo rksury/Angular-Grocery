@@ -14,12 +14,12 @@ import {OrderhistoryComponent} from './orderhistory/orderhistory.component';
 
 const routes: Routes = [
     {
-        path: 'home', component: HomeComponent,
+        path: '', component: HomeComponent,
         children: [
             {path: 'login', component: LoginComponent},
             {path: 'signup', component: SignupComponent},
 
-            {path: 'dashboard', component: DashboardComponent},
+            {path: '', component: DashboardComponent},
             {path: 'spcl', component: SpecialofferComponent},
             {path: 'aboutus', component: AboutusComponent},
             {path: 'services', component: OurservicesComponent},
@@ -28,7 +28,7 @@ const routes: Routes = [
             {path: 'history', component: OrderhistoryComponent },
             {path: 'product/:id', component: ProductsComponent },
 
-            {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
+            {path: '', redirectTo: '', pathMatch: 'full'},
 
             // { path: '**', component: PageNotFoundComponent }
 
