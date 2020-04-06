@@ -11,7 +11,7 @@ export class SignupService {
     constructor(private httpClient: HttpClient) {
     }
 
-    signup(data) {
-      return this.httpClient.post(this.baseUrl + 'auth/register', data);
+    signup(payload) {
+      return this.httpClient.post(this.baseUrl + 'auth/register', payload);
     }
 }

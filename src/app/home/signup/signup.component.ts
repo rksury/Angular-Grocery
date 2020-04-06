@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {SignupService} from './signup.service';
 import {Router} from '@angular/router';
+import {HomeComponent} from '../home.component';
 
 @Component({
     selector: 'app-signup',
@@ -13,12 +14,13 @@ export class SignupComponent implements OnInit {
         name: new FormControl(''),
         username: new FormControl(''),
         email: new FormControl(''),
-        number: new FormControl(''),
+        mobile_number: new FormControl(''),
         password: new FormControl(''),
         confirm_password: new FormControl(''),
     });
 
-    constructor(private signupService: SignupService, private router: Router) {
+    constructor(private signupService: SignupService, private router: Router,
+                private homeComponent: HomeComponent) {
     }
 
     ngOnInit(): void {
@@ -26,15 +28,19 @@ export class SignupComponent implements OnInit {
 
     onSubmit() {
         console.warn(this.submitform.value);
-        this.signupService.signup(this.submitform.value).subscribe(data => {
+        // @ts-ignore
+        this.signupService.signup(this.submitform.value).subscribe <any> (data => {
             try {
-                window.localStorage.setItem('token', data['token']);
-                // window.localStorage.setItem('token', data['user']);
-                this.router.navigate(['/home/dashboard']);
-            } catch (e) {
+                window.localStorage.setItem('token', data.token);
+                window.localStorage.setItem('user', data.user.name);
+                this.router.navigate(['/']);
+                this.homeComponent.refresh();
+                this.submitform.reset();
+            } catch (e)
+            {
                 console.log(e);
             }
 
-        });
+    });
     }
 }

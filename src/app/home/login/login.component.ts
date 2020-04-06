@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {LoginService} from './login.service';
 import {Router} from '@angular/router';
+import { HomeComponent} from '../home.component';
 
 @Component({
     selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
         password: new FormControl(''),
     });
 
-    constructor(private loginService: LoginService, private router: Router) {
+    constructor(private loginService: LoginService, private router: Router,
+                private homeComponent: HomeComponent) {
     }
 
     ngOnInit() {
@@ -22,13 +24,17 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         console.warn(this.submitform.value);
-        this.loginService.Login(this.submitform.value).subscribe(data => {
+        // @ts-ignore
+        this.loginService.Login(this.submitform.value).subscribe <any> (data => {
                 try {
-                    window.localStorage.setItem('token', data['token']);
-                    window.localStorage.setItem('user', data['user'].name);
-                    this.router.navigate(['/home/dashboard']);
+                    window.localStorage.setItem('token', data.token);
+                    window.localStorage.setItem('user', data.user.name);
+                    this.router.navigate(['/']);
+
                     // window.localStorage.setItem('user', data.user);
-                    // this.utils.presentToast('Logged in as ' + data.user.name);
+
+                    this.homeComponent.refresh();
+                    this.submitform.reset();
                 } catch (e) {
                     console.log(e);
                 }

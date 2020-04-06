@@ -4216,7 +4216,7 @@ ul.wmuSliderPagination {
 
     .w3l_search {
         margin: .1em 0 0.5em 1.7em;
-        width: 51%;
+        /*width: 50%;*/
     }
 
     .w3l_search input[type="text"] {

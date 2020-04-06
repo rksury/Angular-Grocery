@@ -65,14 +65,14 @@
 
 .log_out {
     font-size: 20px;
-    border: #8bc34a;
+    /*border: #8bc34a;*/
     color: white;
     margin-top: 20px;
-    margin-left: -20px;
+    margin-left: -50px;
 }
 
 .log_out:hover{
-    font-size: 25px;
+    font-size: 22px;
 
 }
 

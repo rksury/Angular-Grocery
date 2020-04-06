@@ -11,8 +11,13 @@ export class LoginService {
     constructor(private httpClient: HttpClient) {
     }
 
-    Login(data) {
-        return this.httpClient.post(this.baseUrl + 'auth/login', data
-        );
+    Login(paylod) {
+        return this.httpClient.post(this.baseUrl + 'auth/login', paylod);
     }
+
+    VerifyLogin() {
+        const payload = {token: window.localStorage.getItem('token')};
+        return this.httpClient.post(this.baseUrl + 'auth/verify-token', payload);
+    }
+
 }
