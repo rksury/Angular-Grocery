@@ -23,8 +23,8 @@
 .company_logo {
 
     /*background: url('../../assets/logo.png');*/
-    width: 245px;
-    height: 60px;
+    /*width: 245px;*/
+    /*height: 60px;*/
     display: flex;
     background: no-repeat;
     background-color: white;
@@ -67,8 +67,7 @@
     font-size: 20px;
     /*border: #8bc34a;*/
     color: white;
-    margin-top: 20px;
-    margin-left: -50px;
+    margin-top: 10px;
 }
 
 .log_out:hover{
@@ -89,7 +88,7 @@
 
 .dropbtn {
     color: #333333;
-    width: 244px;
+    width: 235px;
     height: 50px;
     padding: 10px;
     font-size: 13px;
@@ -100,7 +99,7 @@
 .dropbtn:hover {
     background-color: #84C639;
     color: white;
-    width: 245px;
+    /*width: 245px;*/
 
 }
 
@@ -115,7 +114,7 @@
     display: none;
     position: absolute;
     /*background-color: #f1f1f1;*/
-    min-width: 245px;
+    min-width: 235px;
     /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     z-index: 1;
 }
@@ -188,7 +187,7 @@
 .down {
     position: relative;
     display: inline-block;
-    z-index: 999;
+    /*z-index: 999;*/
 }
 
 .down-content {

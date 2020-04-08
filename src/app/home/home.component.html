@@ -1,12 +1,12 @@
 <!-- header -->
-<div class="agileits_header">
+<div class="agileits_header fixed" >
 
-    <div class="w3l_offers company_logo">
-        <img [routerLink]="['/']" src="../../assets/logo.png"
-             style="width: 100px; height:50px; margin-left: 50px;" title="Home">
-    </div>
-    <div class="down w3l_offers ">
-        <button class="drop" onclick="myFunction1()" >{{selectedCity}} <span class="caret"></span></button>
+<!--    <div class="w3l_offers company_logo">-->
+<!--        <img [routerLink]="['/']" src="../../assets/logo.png"-->
+<!--             style="width: 100px; height:50px; margin-left: 50px;" title="Home">-->
+<!--    </div>-->
+    <div class="down w3l_select" >
+        <button class="drop" onclick="myFunction1()">{{selectedCity}} <span class="caret"></span></button>
         <div class="down-content" id="myDropdown1">
             <a (click)="onChangeCity('Indore')">Indore</a>
             <a (click)="onChangeCity('Dewas')">Dewas</a>
@@ -18,24 +18,24 @@
            title="Click Now for Get Offer "> Special Offers !</a>
     </div>
 
-    <div class="w3l_search" style=" margin-left: -1px;" >
+    <div class="w3l_search" >
         <form>
             <input class="search_bar" name="Product" placeholder="Search Products...." type="text">
             <i class="fa fa-search search_icon"></i>
         </form>
     </div>
 
-    <div class="product_list_header" style="margin-left: -20px;">
-        <form>
+    <div class="product_list_header" style="margin-left: -10px;">
             <div [routerLink]="['/cart']" class="cart_bar ">
                 <a class="cart_a" type="hidden">View Cart</a> &nbsp;
                 <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 20px;"></i>
             </div>
-
-        </form>
     </div>
 
-    <div class="w3l_header_right" style="margin-top: 5px; margin-left: -20px;">
+<!--    <div  class="" style="width: 2px; height:30px; background: red;"></div>-->
+
+    <div class="w3l_header_right" style="margin-top: 7px; height:40px;
+      border-left: 1px solid white; ">
         <ul>
             <li class="dropdown profile_details_drop">
                 <a class="dropdown-toggle" data-toggle="dropdown">
@@ -53,10 +53,11 @@
             </li>
         </ul>
     </div>
-    <div class="w3l_header_right" style="margin-top: 16px;  margin-left: -50px; width: 15%; height: 30px;">
+    <div class="w3l_header_right" style="margin-left: -50px; margin-top: 20px; width: 15%; height: 30px;">
         <b style="color: white; font-size: 12px;">{{user}}</b>
     </div>
-    <div class="w3l_header_right" (click)="userLogout()">
+    <div class="w3l_header_right" (click)="userLogout()" style=" border-left: 1px solid white;
+    height:40px; margin-top: 7px;">
         <i  class="fa fa-power-off log_out" title="log out "></i>
     </div>
     <div class="clearfix"></div>
@@ -75,7 +76,7 @@
 <!-- Aside Menu -->
 <div class="banner">
 
-    <div class="w3l_banner_nav_left" style=" position: fixed; height: 100%">
+    <div class="w3l_banner_nav_left" style=" position: fixed; height: 100%;">
         <nav class="navbar nav_bottom">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header nav_2">
