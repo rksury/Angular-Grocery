@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
                 try {
                     window.localStorage.setItem('token', data.token);
                     window.localStorage.setItem('user', data.user.name);
-                    this.router.navigate(['/']);
+                    // this.router.navigate(['/']);
 
                     // window.localStorage.setItem('user', data.user);
 

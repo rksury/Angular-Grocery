@@ -6,33 +6,28 @@ import {environment} from '../../../environments/environment';
     providedIn: 'root'
 })
 export class CartService {
-    baseurl = environment.baseurl;
+    baseUrl = environment.baseurl;
 
     constructor(private httpclient: HttpClient) {
     }
 
-
-    add_to_cart(pk, q) {
-        const data = {product: pk, quantity: 1, package: q};
-        const httpOptions = {
+    add_to_cart(pk) {
+        const data = { product: pk, quantity: 1};
+        const httpOption = {
             headers: new HttpHeaders({
-                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
-                }
-            )
+                    Authorization: 'Bearer' + window.localStorage.getItem('token')
+            })
         };
-        return this.httpclient.post(this.baseurl + 'cart/', data, httpOptions);
-
+        return this.httpclient.post( this.baseUrl + 'cart/', data, httpOption);
+    }
+    get_cart() {
+        const httpOption = {
+            headers: new HttpHeaders( {
+                Authorization: 'Bearer' +  window.localStorage.getItem('token')
+            })
+        };
+        return this.httpclient.get(this.baseUrl + '/cart', httpOption);
     }
 
-    getCart() {
-        const httpOptions = {
-            headers: new HttpHeaders({
-                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
-                }
-            )
-        };
-        return this.httpclient.get(this.baseurl + 'cart/', httpOptions);
-
-    }
 
 }

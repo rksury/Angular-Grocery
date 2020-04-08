@@ -17,11 +17,12 @@
 
                 </thead>
 
-                <tbody>
-                <tr>
+                <tbody *ngIf="showcart">
+                <tr *ngFor="let product of products">
 
                     <td style=" width:20%; text-align: center;">
-                        <img alt="" src="../../../assets/16.png" style="width: 70%;" height="70%"/>
+                        <p style="color: #7f7f7f; font-size: 13px;">{{product.item_name}} </p>
+                        <img alt="" src="{{product.image}}" style="width: 70%;" height="70%"/>
                     </td>
 
                     <td style="width:30%; text-align: center;">
@@ -29,7 +30,7 @@
                     </td>
 
                     <td style="width:20%; text-align: center;">
-                        <h5>₹110.00</h5>
+                        <h5>{{product.final_price}}</h5>
                     </td>
                     <td style="width:20%; text-align: center;">
                         <input max="10" style="width:80px; text-align: center;" type="text" value="2">
@@ -56,7 +57,7 @@
                 <input class="button" name="submit" type="submit" value="Checkout">
             </div>
           <div class="snipcart-details top_brand_home_details" style="width: 20%; float: left;">
-                <input [routerLink]="['/home/products']" class="button" name="submit" type="submit" value="Continue Shopping">
+                <input [routerLink]="['/products']" class="button" name="submit" type="submit" value="Continue Shopping">
             </div>
 </div>
 

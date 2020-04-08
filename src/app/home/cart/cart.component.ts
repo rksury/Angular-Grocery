@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CartService} from './cart.service';
 import {Router} from '@angular/router';
+import {Toast} from 'ngx-toastr';
 
 @Component({
     selector: 'app-cart',
@@ -10,48 +11,22 @@ import {Router} from '@angular/router';
 export class CartComponent implements OnInit {
     cart;
     products;
-    isloggedin = window.localStorage.getItem('token') !== null;
+    // isloggedin = window.localStorage.getItem('token') !== null;
+    showcart = false;
 
-    constructor(private cartService: CartService,
+    constructor(private cartService: CartService, private toast: Toast,
                 private router: Router) {
     }
 
     ngOnInit(): void {
-        this.getCart();
+        this.get_cart();
     }
 
-    ionViewWillEnter() {
-        this.getCart();
-        this.isloggedin = window.localStorage.getItem('token') !== null;
-        if (!this.isloggedin) {
-            this.router.navigate(['tabs/login']);
-        }
-
+    get_cart() {
+        this.cartService.get_cart().subscribe(data => {
+            this.cart = data;
+            this.products = this.cart.products;
+            this.showcart = true;
+        });
     }
-
-    getCart() {
-        this.cartService.getCart().subscribe(data => {
-                this.cart = data;
-                this.products = this.cart.products;
-                console.log(this.cart.products);
-            },
-            // error => {
-            // this.utils.presentToast('Some Error Occurred');
-            // }
-        );
-    }
-
-    decrement(pk) {
-        console.log(pk);
-    }
-
-    increment(pk) {
-        console.log(pk);
-    }
-
-    update_quantity() {
-        console.log('dsad');
-    }
-
-
 }
