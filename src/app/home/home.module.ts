@@ -14,6 +14,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import {Toast, ToastrModule} from 'ngx-toastr';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        ToastrModule.forRoot(),
     ]
 })
 export class HomeModule { }

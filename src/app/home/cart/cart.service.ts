@@ -15,7 +15,7 @@ export class CartService {
         const data = { product: pk, quantity: 1};
         const httpOption = {
             headers: new HttpHeaders({
-                    Authorization: 'Bearer' + window.localStorage.getItem('token')
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
             })
         };
         return this.httpclient.post( this.baseUrl + 'cart/', data, httpOption);
@@ -23,10 +23,21 @@ export class CartService {
     get_cart() {
         const httpOption = {
             headers: new HttpHeaders( {
-                Authorization: 'Bearer' +  window.localStorage.getItem('token')
+                Authorization: 'Bearer ' +  window.localStorage.getItem('token')
             })
         };
-        return this.httpclient.get(this.baseUrl + '/cart', httpOption);
+        return this.httpclient.get(this.baseUrl + 'cart/', httpOption);
+    }
+
+     add_item(pk) {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
+                }
+            )
+        };
+        const data = {id: pk};
+        return this.httpclient.post(this.baseUrl + 'cart/add-item', data, httpOptions);
     }
 
 

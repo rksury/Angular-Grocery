@@ -3,7 +3,7 @@ import {ProductsService} from './products.service';
 import {Router, ActivatedRoute} from '@angular/router';
 import {CartService} from '../cart/cart.service';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Toast} from 'ngx-toastr';
+import { ToastrService} from 'ngx-toastr';
 
 @Component({
     selector: 'app-products',
@@ -17,39 +17,48 @@ export class ProductsComponent implements OnInit {
     products = {};
 
     submitform = new FormGroup({
-        // image: new FormControl(''),
-        // product_name: new FormControl(''),
-        // price: new FormControl(''),
-
-        add: new FormControl(''),
+        pk: new FormControl(''),
         item_name: new FormControl(''),
         amount: new FormControl(''),
         discount_amount: new FormControl(''),
-
+        Quantity: new FormControl(''),
     });
 
     constructor(private productsService: ProductsService, private cartService: CartService,
-                private activatedRoute: ActivatedRoute, private toast: Toast,
+                private activatedRoute: ActivatedRoute, private toast: ToastrService,
                 private router: Router) {
     }
 
     ngOnInit(): void {
         this.activatedRoute.queryParams.subscribe(params => {
-            this.products_data(params);
+            this.get_product(params);
         });
     }
 
-    products_data(params?: any) {
-
-        this.productsService.all_products(params).subscribe(data => {
+    get_product(params?: any) {
+        this.productsService.get_products(params).subscribe(data => {
             this.products = data;
+            this.showProducts = true;
+        }, error => {
+            this.showProducts = false;
+        });
+    }
+
+    get_all_products() {
+        this.productsService.get_all_products().subscribe(data => {
+            this.products = data;
+            this.showProducts = true;
+        }, error => {
+            this.showProducts = false;
         });
     }
 
     onSubmit(pk) {
-        console.warn(this.submitform.value);
+        // console.warn(this.submitform.value);
         this.cartService.add_to_cart(pk).subscribe(data => {
-                this.cart = data;
+            this.products = data;
+        }, error => {
+            this.showProducts = false;
         });
     }
 }
