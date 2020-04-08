@@ -653,12 +653,12 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
 }
 
 .agile_top_brands_grids {
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
     margin: 3em 0 0;
 }
 
 .top-brands {
-    background: white;
+    /*background: white;*/
 }
 
 .agile_top_brand_left_grid1 p {
@@ -1020,7 +1020,7 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
 /*-- footer --*/
 .footer {
     padding: 4em 0;
-    background: #212121;
+    background: #8bc34a;
 }
 
 .w3_footer_grid h3 {
@@ -1038,7 +1038,7 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
 }
 
 .w3_footer_grid ul.w3_footer_grid_list li a {
-    color: #999;
+    color: whitesmoke;
     text-decoration: none;
     text-transform: capitalize;
 }
