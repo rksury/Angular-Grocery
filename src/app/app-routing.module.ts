@@ -7,8 +7,8 @@ import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
 
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule ) },
-  {path: '', redirectTo: '/home/dashboard', pathMatch: 'full'},
+  { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule ) },
+  {path: '', redirectTo: '/', pathMatch: 'full'},
 
 ];
 

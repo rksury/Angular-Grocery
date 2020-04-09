@@ -28,7 +28,7 @@ const routes: Routes = [
             {path: 'history', component: OrderhistoryComponent },
             {path: 'product/:id', component: ProductsComponent },
 
-            {path: '', redirectTo: '', pathMatch: 'full'},
+            {path: '', redirectTo: '/', pathMatch: 'full'},
 
             // { path: '**', component: PageNotFoundComponent }
 
