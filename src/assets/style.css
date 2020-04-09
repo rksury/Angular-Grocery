@@ -1034,7 +1034,7 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
     list-style-type: none;
     margin-bottom: 1.5em;
     padding-left: 2em;
-    background: url(../images/img-sp.png) no-repeat -14px -193px;
+    background: url('../images/img-sp.png') no-repeat -14px -193px;
 }
 
 .w3_footer_grid ul.w3_footer_grid_list li a {

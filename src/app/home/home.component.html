@@ -1,10 +1,8 @@
 <!-- header -->
 <div class="agileits_header fixed" >
 
-<!--    <div class="w3l_offers company_logo">-->
-<!--        <img [routerLink]="['/']" src="../../assets/logo.png"-->
-<!--             style="width: 100px; height:50px; margin-left: 50px;" title="Home">-->
-<!--    </div>-->
+    <div class="w3l_offers home_icon"> <i class="fa fa-home"></i></div>
+
     <div class="down w3l_select" >
         <button class="drop" onclick="myFunction1()">{{selectedCity}} <span class="caret"></span></button>
         <div class="down-content" id="myDropdown1">
@@ -34,7 +32,7 @@
 
 <!--    <div  class="" style="width: 2px; height:30px; background: red;"></div>-->
 
-    <div class="w3l_header_right" style="margin-top: 7px; height:40px;
+    <div class="w3l_header_right" style="margin-top: 5px; height:50px;
       border-left: 1px solid white; ">
         <ul>
             <li class="dropdown profile_details_drop">
@@ -53,12 +51,11 @@
             </li>
         </ul>
     </div>
-    <div class="w3l_header_right" style="margin-left: -50px; margin-top: 20px; width: 15%; height: 30px;">
+    <div class="w3l_header_right" style="margin-left: -50px; margin-top: 17px; width: 15%; height: 30px;">
         <b style="color: white; font-size: 12px;">{{user}}</b>
     </div>
-    <div class="w3l_header_right" (click)="userLogout()" style=" border-left: 1px solid white;
-    height:40px; margin-top: 7px;">
-        <i  class="fa fa-power-off log_out" title="log out "></i>
+    <div class="w3l_header_right logout_div" (click)="userLogout()" style=" ">
+        <i  class="fa fa-power-off log_icon" title="log out "></i>
     </div>
     <div class="clearfix"></div>
 </div>

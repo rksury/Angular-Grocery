@@ -20,14 +20,17 @@
 
 }
 
-.company_logo {
+.home_icon{
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
 
-    /*background: url('../../assets/logo.png');*/
-    /*width: 245px;*/
-    /*height: 60px;*/
+.company_logo {
     display: flex;
     background: no-repeat;
-    background-color: white;
+
 }
 
 
@@ -62,15 +65,21 @@
     text-transform: capitalize;
 }
 
+.logout_div{
+    border-left: 1px solid white;
+    height:50px;
+    margin-top: 5px;
+    margin-left: -10px;
+}
 
-.log_out {
+.log_icon {
     font-size: 20px;
     /*border: #8bc34a;*/
     color: white;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
-.log_out:hover{
+.log_icon:hover{
     font-size: 22px;
 
 }
