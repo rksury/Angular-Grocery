@@ -25,13 +25,11 @@ export class LoginComponent implements OnInit {
     onSubmit() {
         console.warn(this.submitform.value);
         // @ts-ignore
-        this.loginService.Login(this.submitform.value).subscribe <any> (data => {
+        this.loginService.Login(this.submitform.value).subscribe <any> ( data => {
                 try {
                     window.localStorage.setItem('token', data.token);
                     window.localStorage.setItem('user', data.user.name);
-                    // this.router.navigate(['/']);
-
-                    // window.localStorage.setItem('user', data.user);
+                    this.router.navigate(['/']);
 
                     this.homeComponent.refresh();
                     this.submitform.reset();

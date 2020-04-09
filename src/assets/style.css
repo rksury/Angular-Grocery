@@ -636,6 +636,9 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
     border: 1px solid #BEBEBE;
     position: relative;
 }
+.agile_top_brand_left_grid:hover {
+   box-shadow: 0 0 11px rgba(50,50,50,.3);
+}
 
 .agile_top_brand_left_grid_pos {
     position: absolute;
@@ -704,7 +707,7 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
     text-decoration: none;
     position: relative;
     border: none;
-    border-radius: 0;
+    border-radius: 3px;
     width: 100%;
     text-transform: uppercase;
     padding: .5em 0;
