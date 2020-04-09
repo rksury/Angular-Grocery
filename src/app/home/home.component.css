@@ -38,6 +38,7 @@
 .search_bar {
     border-radius: 5px;
     margin-top: 6px;
+
     /*width: 100%;*/
 }
 
@@ -70,7 +71,7 @@
     border-left: 1px solid white;
     height:50px;
     margin-top: 5px;
-    margin-left: -10px;
+    margin-left: -15px;
 }
 
 .log_icon {
@@ -78,6 +79,7 @@
     /*border: #8bc34a;*/
     color: white;
     margin-top: 12px;
+    margin-left: -15px;
 }
 
 .log_icon:hover{
