@@ -87,13 +87,12 @@
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
                     <li *ngFor="let category of categories" class="dropdown">
-                        <a class="dropbtn">{{category.title}}
-                        </a>
+                        <a class="dropbtn">{{category.title}}</a>
 
                         <div class="dropdown-content">
                             <a *ngFor="let subcategory of category.sub_categories"
                                [queryParams]="{ category:subcategory.id }"
-                               [routerLink]="['/home/products']">{{subcategory.title}}</a>
+                               [routerLink]="['/products']">{{subcategory.title}}</a>
 
                         </div>
 

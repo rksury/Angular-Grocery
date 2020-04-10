@@ -8,7 +8,7 @@ import {environment} from '../../../environments/environment';
 export class CartService {
     baseUrl = environment.baseurl;
 
-    constructor(private httpclient: HttpClient) {
+    constructor(private httpClient: HttpClient) {
     }
 
     add_to_cart(pk) {
@@ -18,7 +18,7 @@ export class CartService {
                     Authorization: 'Bearer ' + window.localStorage.getItem('token')
             })
         };
-        return this.httpclient.post( this.baseUrl + 'cart/', data, httpOption);
+        return this.httpClient.post( this.baseUrl + 'cart/', data, httpOption);
     }
     get_cart() {
         const httpOption = {
@@ -26,7 +26,7 @@ export class CartService {
                 Authorization: 'Bearer ' +  window.localStorage.getItem('token')
             })
         };
-        return this.httpclient.get(this.baseUrl + 'cart/', httpOption);
+        return this.httpClient.get(this.baseUrl + 'cart/', httpOption);
     }
 
      add_item(pk) {
@@ -37,8 +37,46 @@ export class CartService {
             )
         };
         const data = {id: pk};
-        return this.httpclient.post(this.baseUrl + 'cart/add-item', data, httpOptions);
+        return this.httpClient.post(this.baseUrl + 'cart/add-item', data, httpOptions);
     }
+
+    remove_item(pk) {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
+                }
+            )
+        };
+        const data = {id: pk};
+        return this.httpClient.post(this.baseUrl + 'cart/remove-item', data, httpOptions);
+    }
+
+     place_order() {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
+                }
+            )
+        };
+        return this.httpClient.post(this.baseUrl + 'cart/order', null, httpOptions);
+    }
+
+    capture_payment(paymentid) {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
+                }
+            )
+        };
+        const data = {
+            payment_id: paymentid,
+            mode: 'RAZORPAY'
+
+        };
+        return this.httpClient.post(this.baseUrl + 'product/capture-payment', data, httpOptions);
+
+    }
+
 
 
 }

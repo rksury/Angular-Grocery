@@ -16,7 +16,7 @@
 
 
 .table_row {
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .table_div {
@@ -25,11 +25,12 @@
 
 .remove_icon {
     color: #BEBEBE;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .remove_icon:hover {
     color: red;
+    font-size: 18px;
 }
 
 .hr_row {

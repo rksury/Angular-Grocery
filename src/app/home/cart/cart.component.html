@@ -3,75 +3,78 @@
         <h3> Cart :</h3>
     </div>
 
-    <div class="cart_inner" style="margin-top: 3%;">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th class="table_heading" scope="col">Product Id</th>
-                    <th class="table_heading" scope="col">Product</th>
-                    <th class="table_heading" scope="col">Product Detail</th>
-                    <th class="table_heading" scope="col">Price</th>
-                    <th class="table_heading" scope="col">Quantity</th>
-                    <th class="table_heading" scope="col">Total</th>
-                    <th class="table_heading" scope="col"></th>
-                </tr>
+    <div *ngIf="showcart" class="cart_inner" style="margin-top: 3%;">
+        <div *ngIf="isloggedin" class="table-responsive">
+            <form>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="table_heading" scope="col"> Id</th>
+                        <th class="table_heading" scope="col">Product</th>
+                        <th class="table_heading" scope="col">Product Detail</th>
+                        <th class="table_heading" scope="col">Price</th>
+                        <th class="table_heading" scope="col">Quantity</th>
+                        <th class="table_heading" scope="col">Total</th>
+                        <th class="table_heading" scope="col"></th>
+                    </tr>
 
-                </thead>
-                <tbody>
-                <tr *ngFor="let product of products" class="table_row">
+                    </thead>
 
-                    <td class="table_div">
-                        <h5>{{product.id}}</h5>
-                    </td>
-                    <td class="table_div">
-                        <h5>{{product.item_name}} </h5>
-                        <img alt="" src="{{product.image}}" style="width: 70%; height: 70%"/>
-                    </td>
-                    <td class="table_div">
-                        <h5>Not Available </h5>
-                    </td>
-                    <td class="table_div">
-                        <h5>{{product.final_price}}</h5>
-                    </td>
-                    <td class="table_div">
-                        <input max="10" style="width:80px; text-align: center;" type="text" value="1">
-                    </td>
-                    <td class="table_div">
-                        <h5>{{product.final_price}}</h5>
-                    </td>
-                    <td class="table_div">
-                        <a><i class="fa fa-times remove_icon"></i></a>
-                    </td>
+                    <tbody>
+                    <tr *ngFor="let product of products" class="table_row">
 
-                </tr>
-                <hr class="hr_row">
-                <tr style="border-top: 2px solid #acacac;">
-                    <td style=" width:20%;"></td>
-                    <td style=" width:20%;"></td>
-                    <td style=" width:20%;"></td>
-                    <td style=" width:20%;"></td>
-                    <td style=" width:20%;">
-                        <h4 style="float: left;">Subtotal :</h4>
-                    </td>
-                    <td style=" width:20%;">
-                        <h4 style="float: right;">₹220.00</h4>
-                    </td>
-                     <td style=" width:20%;"></td>
-                </tr>
-                </tbody>
-            </table>
+                        <td class="table_div">
+                            <h5>{{product.id}}</h5>
+                        </td>
+                        <td class="table_div">
+                            <h5>{{product.product.item_name}} </h5>
+                            <img alt="" src="{{product.product.image}}" style="width: 70%; height: 70%"/>
+                        </td>
+                        <td class="table_div">
+                            <h5>Not Available </h5>
+                        </td>
+                        <td class="table_div">
+                            <h5>{{product.total_price}}</h5>
+                        </td>
+                        <td class="table_div">
+                            <input  max="10" (click)="add_product(product.id)" style="width:60px; text-align: center;" type="text"
+                                   value="1">
+                        </td>
+                        <td class="table_div">
+                            <h5>{{product.total_price}}</h5>
+                        </td>
+                        <td class="table_div">
+                            <i (click)="onClick_remove(product.id)" class="fa fa-times-circle remove_icon"></i>
+                        </td>
 
-            <div style="margin-top: 7%;">
-                <div class="snipcart-details top_brand_home_details button_button" style=" float: right;">
-                    <input class="button" name="submit" type="submit" value="Checkout">
+                    </tr>
+                    <hr class="hr_row">
+                    <tr style="border-top: 1px solid #acacac;">
+                        <td style=" width:20%;"></td>
+                        <td style=" width:20%;"></td>
+                        <td style=" width:20%;"></td>
+                        <td style=" width:20%;"></td>
+                        <td style=" width:20%;">
+                            <h4 style="float: left;">Subtotal :</h4>
+                        </td>
+                        <td style=" width:20%;">
+                            <h4 style="float: right;">₹{{cart.final_price}}</h4>
+                        </td>
+                        <td style=" width:20%;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 7%;">
+                    <div class="snipcart-details top_brand_home_details button_button" style=" float: right;">
+                        <input (click)="payment()" class="button" name="submit" type="submit" value="Checkout">
+                    </div>
+                    <div class="snipcart-details top_brand_home_details button_button" style="float: left;">
+                        <input [routerLink]="['/products']" class="button" name="submit" type="submit"
+                               value="Continue Shopping">
+                    </div>
                 </div>
-                <div class="snipcart-details top_brand_home_details button_button" style="float: left;">
-                    <input [routerLink]="['/products']" class="button" name="submit" type="submit"
-                           value="Continue Shopping">
-                </div>
-            </div>
-
+            </form>
         </div>
     </div>
 </div>
