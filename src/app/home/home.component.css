@@ -23,17 +23,10 @@
 .home_icon{
     color: white;
     font-size: 30px;
-    margin-left: 10px;
-    margin-top: 5px;
+    margin-left: 20px;
+    margin-top: 7px;
     cursor: pointer;
 }
-
-.company_logo {
-    display: flex;
-    background: no-repeat;
-
-}
-
 
 .search_bar {
     border-radius: 5px;
@@ -49,15 +42,12 @@
 }
 
 .cart_bar {
-    /*border-radius: 2px;*/
-    /*border: 1px solid #8bc34a;*/
-    /*background-color: #1e1e1e;*/
-    color: white;
     width: 150px;
     height: 40px;
     margin-top: 18px;
     text-align: center;
     cursor: pointer;
+    border: none;
 }
 
 .cart_a {
@@ -78,8 +68,8 @@
     font-size: 20px;
     /*border: #8bc34a;*/
     color: white;
-    margin-top: 12px;
-    margin-left: -15px;
+    margin-top: 14px;
+    margin-left: -20px;
 }
 
 .log_icon:hover{
@@ -199,7 +189,7 @@
 .down {
     position: relative;
     display: inline-block;
-    /*z-index: 999;*/
+    border-bottom: none;
 }
 
 .down-content {

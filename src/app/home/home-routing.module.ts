@@ -25,7 +25,7 @@ const routes: Routes = [
             {path: 'services', component: OurservicesComponent},
             {path: 'products', component: ProductsComponent},
             {path: 'cart', component: CartComponent },
-            {path: 'history', component: OrderhistoryComponent },
+            {path: 'order_history', component: OrderhistoryComponent },
             {path: 'product/:id', component: ProductsComponent },
 
             {path: '', redirectTo: '/', pathMatch: 'full'},

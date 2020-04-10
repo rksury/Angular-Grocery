@@ -1,18 +1,36 @@
-.main_grid{
-    width:80%;
+.main_grid {
+    width: 80%;
     float: right;
+    /*margin-left: ;*/
 }
 
-.heading{
+.heading {
     font-size: 30px;
     font-weight: bold;
     color: #BEBEBE;
 }
 
-.hr_row{
-    border:1px solid #BEBEBE;
+.table_heading {
+    color: #03a9f4;
+    width: 20%;
+    text-align: center;
+}
+
+.hr_row {
+    border: 1px solid #BEBEBE;
     width: 95%;
 }
 
+.table_row {
+    background: whitesmoke;
+    /*border-color: #DCDCDC;*/
+    border-bottom: 2px solid white;
+}
+
+.table_div {
+    color: black;
+    width: 20%;
+    text-align: center;
+}
 
 

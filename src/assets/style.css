@@ -111,11 +111,11 @@ ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_ban
     width: 10%;
 }
 
-.w3l_offers {
+.w3l_header {
     float: left;
 }
 
-.w3l_offers a {
+.w3l_header a {
     font-size: 15px;
     color: #fff;
     text-decoration: none;
@@ -123,13 +123,6 @@ ul.agileits_social_icons li a, .w3l_banner_nav_right_banner_pet a, .w3ls_w3l_ban
     text-align: center;
 }
 
-.w3l_offers a:hover {
-    font-size: 17px;
-    color: white;
-
-
-
-}
 
 .w3l_search {
     float: left;
@@ -4806,7 +4799,7 @@ ul.wmuSliderPagination {
         background: url(../images/img-sp.png) no-repeat 17px 3px #84C639;
     }
 
-    .w3l_offers {
+    .w3l_header {
         float: none;
         text-align: center;
     }

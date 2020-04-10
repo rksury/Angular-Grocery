@@ -1,18 +1,47 @@
-.main_grid{
-    width:80%;
+.main_grid {
+    width: 80%;
     float: right;
 }
 
-.heading{
+.heading {
     font-size: 30px;
     font-weight: bold;
     color: #BEBEBE;
 }
 
-.hr_row{
-    border:1px solid #BEBEBE;
-    width: 95%;
+.table_heading {
+    color: #03a9f4;
+    width: 20%;
 }
 
 
+.table_row {
+    border-bottom: 2px solid whitesmoke;
+}
 
+.table_div {
+    width: 20%;
+}
+
+.remove_icon {
+    color: #BEBEBE;
+    font-size: 20px;
+}
+
+.remove_icon:hover {
+    color: red;
+}
+
+.hr_row {
+    border: 1px solid white;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.button_button {
+    width: 20%
+}
+
+.button_button:hover {
+     box-shadow: 0 0 11px rgba(50,50,50,.3);
+}

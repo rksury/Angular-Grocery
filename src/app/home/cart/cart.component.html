@@ -1,45 +1,53 @@
-<div class="container main_grid" style="margin-top: -5%;">
+<div class="container main_grid">
     <div class="heading">
         <h3> Cart :</h3>
     </div>
 
-    <div class="cart_inner" style="margin-top: 5%;">
+    <div class="cart_inner" style="margin-top: 3%;">
         <div class="table-responsive">
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col" style="color: #03a9f4; width:20%; text-align: center;">Product</th>
-                    <th scope="col" style="color: #03a9f4; width:20%; text-align: center;">Product Detail</th>
-                    <th scope="col" style="color: #03a9f4; width:20%;text-align: center;">Price</th>
-                    <th scope="col" style="color: #03a9f4; width:20%;text-align: center;">Quantity</th>
-                    <th scope="col" style="color: #03a9f4; width:20%;text-align: center;">Total</th>
+                    <th class="table_heading" scope="col">Product Id</th>
+                    <th class="table_heading" scope="col">Product</th>
+                    <th class="table_heading" scope="col">Product Detail</th>
+                    <th class="table_heading" scope="col">Price</th>
+                    <th class="table_heading" scope="col">Quantity</th>
+                    <th class="table_heading" scope="col">Total</th>
+                    <th class="table_heading" scope="col"></th>
                 </tr>
 
                 </thead>
+                <tbody>
+                <tr *ngFor="let product of products" class="table_row">
 
-                <tbody *ngIf="showcart">
-                <tr *ngFor="let product of products">
-
-                    <td style=" width:20%; text-align: center;">
-                        <p style="color: #7f7f7f; font-size: 13px;">{{product.item_name}} </p>
-                        <img alt="" src="{{product.image}}" style="width: 70%;" height="70%"/>
+                    <td class="table_div">
+                        <h5>{{product.id}}</h5>
                     </td>
-
-                    <td style="width:30%; text-align: center;">
-                        <p style="color:#8bc34a;">super cold-drink </p>
+                    <td class="table_div">
+                        <h5>{{product.item_name}} </h5>
+                        <img alt="" src="{{product.image}}" style="width: 70%; height: 70%"/>
                     </td>
-
-                    <td style="width:20%; text-align: center;">
+                    <td class="table_div">
+                        <h5>Not Available </h5>
+                    </td>
+                    <td class="table_div">
                         <h5>{{product.final_price}}</h5>
                     </td>
-                    <td style="width:20%; text-align: center;">
-                        <input max="10" style="width:80px; text-align: center;" type="text" value="2">
+                    <td class="table_div">
+                        <input max="10" style="width:80px; text-align: center;" type="text" value="1">
                     </td>
-                    <td style="width:20%; text-align: center;">
-                        <h5>₹220.00</h5>
+                    <td class="table_div">
+                        <h5>{{product.final_price}}</h5>
                     </td>
+                    <td class="table_div">
+                        <a><i class="fa fa-times remove_icon"></i></a>
+                    </td>
+
                 </tr>
-                <tr style=" border-top-style:solid; border-color: #DCDCDC ">
+                <hr class="hr_row">
+                <tr style="border-top: 2px solid #acacac;">
+                    <td style=" width:20%;"></td>
                     <td style=" width:20%;"></td>
                     <td style=" width:20%;"></td>
                     <td style=" width:20%;"></td>
@@ -47,19 +55,22 @@
                         <h4 style="float: left;">Subtotal :</h4>
                     </td>
                     <td style=" width:20%;">
-                        <h5 style="float: right;">₹220.00</h5>
+                        <h4 style="float: right;">₹220.00</h4>
                     </td>
+                     <td style=" width:20%;"></td>
                 </tr>
                 </tbody>
             </table>
-<div style="margin-top: 7%;">
-            <div class="snipcart-details top_brand_home_details" style="width: 20%; float: right;" >
-                <input class="button" name="submit" type="submit" value="Checkout">
+
+            <div style="margin-top: 7%;">
+                <div class="snipcart-details top_brand_home_details button_button" style=" float: right;">
+                    <input class="button" name="submit" type="submit" value="Checkout">
+                </div>
+                <div class="snipcart-details top_brand_home_details button_button" style="float: left;">
+                    <input [routerLink]="['/products']" class="button" name="submit" type="submit"
+                           value="Continue Shopping">
+                </div>
             </div>
-          <div class="snipcart-details top_brand_home_details" style="width: 20%; float: left;">
-                <input [routerLink]="['/products']" class="button" name="submit" type="submit" value="Continue Shopping">
-            </div>
-</div>
 
         </div>
     </div>
