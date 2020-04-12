@@ -9,23 +9,32 @@
     color: #BEBEBE;
 }
 
-.table_heading {
-    color: #03a9f4;
-    width: 20%;
+.table_row{
+    border-bottom: 2px solid whitesmoke;
 }
 
 
-.table_row {
-    border-bottom: 1px solid whitesmoke;
+
+.input_quantity{
+    width:50px;
+    text-align: center;
+   /*border-bottom: 1px solid whitesmoke;*/
+    border: none;
+    background: whitesmoke;
 }
 
-.table_div {
-    width: 20%;
+.minus_icon{
+    color: #03A9F4;
+    font-size: 18px;
 }
-
+.plus_icon{
+    color: #8bc34a;
+    font-size: 18px;
+}
 .remove_icon {
     color: #BEBEBE;
     font-size: 18px;
+    float: right;
 }
 
 .remove_icon:hover {
@@ -34,9 +43,18 @@
 }
 
 .hr_row {
-    border: 1px solid white;
+    border-top: 1px solid #acacac;
+    width: 100%;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -22px;
+}
+
+.summary{
+    color: #acacac;
+}
+.summary_count{
+    color: #acacac;
+    text-align: right;
 }
 
 .button_button {

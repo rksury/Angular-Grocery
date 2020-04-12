@@ -12,7 +12,7 @@
                         <div class="w3l_banner_nav_right_banner2">
                             <h3>upto <i>50%</i> off.</h3>
                             <div class="more">
-                                <a [routerLink]="['/home/products']"
+                                <a [routerLink]="['/products']"
                                    class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop
                                     now</a>
                             </div>
@@ -22,7 +22,7 @@
                         <div class="w3l_banner_nav_right_banner1">
                             <h3>Make your <span>food</span> with Spicy.</h3>
                             <div class="more">
-                                <a [routerLink]="['/home/products']"
+                                <a [routerLink]="['/products']"
                                    class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop
                                     now</a>
                             </div>
@@ -121,10 +121,11 @@
                                     <div class="snipcart-thumb" style="text-align: center; margin-top: 10px;">
                                         <a>
                                             <img src="{{product.image}}" style="height: 100px; width: 100px"></a>
-                                        <p  style="color: #77838f; height:50px;">{{product.item_name}}</p>
-                                       <h4>₹ <span>{{product.selling_price}}</span>
+                                        <p  style="color: #77838f; height:20px;">{{product.item_name}}</p>
+                                        <p>{{product.brand_name}}</p>
+                                       <h5>₹ <span>{{product.selling_price}}</span>
                                             <b style="color: #03a9f4;"> &nbsp;{{product.final_price}}</b>
-                                        </h4>
+                                        </h5>
                                     </div>
 
                                     <div class="snipcart-details top_brand_home_details">
@@ -177,7 +178,7 @@
                             <img alt=" " class="img-responsive" src="../../../assets/7.jpg">
                             <div class="w3l_fresh_vegetables_grid1_rel_pos">
                                 <div class="more m1">
-                                    <a [routerLink]="['/home/products']"
+                                    <a [routerLink]="['/products']"
                                        class="button--saqui button--round-l button--text-thick"
                                        data-text="Shop now">Shop now</a>
                                 </div>

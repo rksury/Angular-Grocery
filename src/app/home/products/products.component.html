@@ -18,10 +18,11 @@
                                     <div class="snipcart-thumb" style="text-align: center;">
                                         <a>
                                             <img  src="{{product.image}}" style="height: 110px; width: 110px"></a>
-                                        <p style="color: #77838f; height:50px;">{{product.item_name}}</p>
-                                        <h4>₹ <span> {{product.selling_price}}</span>
+                                        <p style="color: #77838f; height:20px;">{{product.item_name}}</p>
+                                        <p>{{product.brand_name}}</p>
+                                        <h5>₹ <span> {{product.selling_price}}</span>
                                             <b style="color: #03a9f4;"> &nbsp; {{product.final_price}}</b>
-                                        </h4>
+                                        </h5>
                                     </div>
                                     <div class="snipcart-details">
                                         <input (click)="onSubmit(product.id)" class="button" name="submit" type="submit" value="Add to cart">

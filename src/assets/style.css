@@ -671,7 +671,7 @@ fresh-vegetables, .w3l_banner_nav_right_banner3_btm, .testimonials, .team, .news
     color: #212121;
 }
 
-.agile_top_brand_left_grid1 h4 span, .agileinfo_single_right_snipcart h4 span {
+.agile_top_brand_left_grid1 h5 span, .agileinfo_single_right_snipcart h5 span {
     font-weight: 300;
     text-decoration: line-through;
     padding-left: 1em;

@@ -43,7 +43,7 @@ export class CartComponent implements OnInit {
     }
 
 
-    onClick_remove(pk) {
+    remove_product(pk) {
         this.cartService.remove_item(pk).subscribe(data => {
             this.cart = data;
             this.products = this.cart.products;
@@ -52,7 +52,7 @@ export class CartComponent implements OnInit {
         });
     }
 
-     place_order() {
+    place_order() {
         this.cartService.place_order().subscribe(data => {
             this.router.navigate(['/tabs/order-history']);
 
@@ -80,6 +80,8 @@ export class CartComponent implements OnInit {
         };
         const successCallback = (paymentid) => {
             this.cartService.capture_payment(paymentid).subscribe(data => {
+                this.place_order();
+            }, error => {
                 this.place_order();
             });
             alert('payment_id: ' + paymentid);
