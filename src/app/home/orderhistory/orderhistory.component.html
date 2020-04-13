@@ -3,8 +3,8 @@
         <h3> Orders History & Status</h3>
     </div>
 
-    <div class="cart_inner" style="margin-top: 3%;">
-        <div class="table-responsive">
+    <div *ngIf="showcart" class="cart_inner" style="margin-top: 3%;">
+        <div *ngIf="isloggedin" class="table-responsive">
             <table class="table">
                 <thead>
                 <tr>
@@ -24,21 +24,21 @@
                         <p> 01 </p>
                     </td>
                     <td class="table_div">
-                        <p> {{product.item_name}} </p>
+                        <p> {{product.product.item_name}} </p>
                     </td>
 
                     <td class="table_div">
-                        <p>{{order.status</p>
+                        <p>order.status</p>
                     </td>
 
                     <td class="table_div">
-                        <p>{{product.selling_price}}</p>
+                        <p>{{product.product.selling_price}}</p>
                     </td>
                     <td class="table_div">
-                         <p>2</p>
+                         <p>{{product.quantity}}</p>
                     </td>
                     <td class="table_div">
-                        <p>{{product.final_price}}</p>
+                        <p>{{product.total_price}}</p>
                     </td>
                 </tr>
 

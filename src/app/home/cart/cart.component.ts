@@ -54,7 +54,7 @@ export class CartComponent implements OnInit {
 
     place_order() {
         this.cartService.place_order().subscribe(data => {
-            this.router.navigate(['/tabs/order-history']);
+            this.router.navigate(['/orderhistory']);
 
         }, error => {
             this.get_cart();
