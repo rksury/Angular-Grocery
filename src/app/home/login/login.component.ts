@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.loginService.verifyToken();
     }
 
     onSubmit() {
@@ -39,6 +40,4 @@ export class LoginComponent implements OnInit {
 
             });
     }
-
-
 }

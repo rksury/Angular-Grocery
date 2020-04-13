@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HomeService} from './home.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Router} from '@angular/router';
+import {LoginService} from './login/login.service';
 
 
 @Component({
@@ -11,12 +12,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class HomeComponent implements OnInit {
     // logedin = window.localStorage.getItem('token') === null;
     user = window.localStorage.getItem('user');
-
     categories = {};
-
     selectedCity = 'Select City';
+    popup = null;
 
-    constructor(private homeService: HomeService, private router: Router) {
+    constructor(private homeService: HomeService, private router: Router,
+                private loginService: LoginService) {
         this.refresh();
     }
 
@@ -29,9 +30,18 @@ export class HomeComponent implements OnInit {
     }
 
     userLogout() {
-    window.localStorage.clear();
-    this.refresh();
-    this.user = 'Guest';
+        this.loginService.logOut();
+        // window.localStorage.clear();
+        this.refresh();
+        this.user = 'Guest';
+    }
+
+    async showToast() {
+        this.popup = 'show';
+        setTimeout(function() {
+            this.popup = null;
+        }, 2000);
+
     }
 
 
@@ -42,6 +52,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.category_data();
+        this.loginService.verifyToken();
     }
 
     category_data() {

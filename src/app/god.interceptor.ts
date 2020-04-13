@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpResponse} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import {ToastrService} from 'ngx-toastr';
+import {tap} from 'rxjs/operators';
+
+@Injectable()
+export class GodInterceptor implements HttpInterceptor {
+
+
+  constructor( private toaster: ToastrService) {}
+
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    return next.handle(request).pipe(tap((event: HttpEvent<any>) => {
+    if (event instanceof HttpResponse && event.status === 404) {
+        this.toaster.success('Hello world!', 'Toastr fun!');
+      }
+    }));
+  }
+}
