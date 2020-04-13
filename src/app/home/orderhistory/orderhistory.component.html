@@ -19,226 +19,228 @@
                 </thead>
 
                 <tbody>
-                <tr class="table_row">
+                <tr *ngFor="let product of products" class="table_row" >
                     <td class="table_div">
                         <p> 01 </p>
                     </td>
                     <td class="table_div">
-                        <p> sprite </p>
+                        <p> {{product.item_name}} </p>
                     </td>
 
                     <td class="table_div">
-                        <p>Pending</p>
+                        <p>{{order.status</p>
                     </td>
 
                     <td class="table_div">
-                        <p>₹110.00</p>
+                        <p>{{product.selling_price}}</p>
                     </td>
                     <td class="table_div">
                          <p>2</p>
                     </td>
                     <td class="table_div">
-                        <p>₹220.00</p>
+                        <p>{{product.final_price}}</p>
                     </td>
                 </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
-                <tr class="table_row">
-                    <td class="table_div">
-                        <p> 01 </p>
-                    </td>
-                    <td class="table_div">
-                        <p> sprite </p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>Pending</p>
-                    </td>
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
 
-                    <td class="table_div">
-                        <p>₹110.00</p>
-                    </td>
-                    <td class="table_div">
-                         <p>2</p>
-                    </td>
-                    <td class="table_div">
-                        <p>₹220.00</p>
-                    </td>
-                </tr>
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr class="table_row">-->
+<!--                    <td class="table_div">-->
+<!--                        <p> 01 </p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p> sprite </p>-->
+<!--                    </td>-->
+
+<!--                    <td class="table_div">-->
+<!--                        <p>Pending</p>-->
+<!--                    </td>-->
+
+<!--                    <td class="table_div">-->
+<!--                        <p>₹110.00</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                         <p>2</p>-->
+<!--                    </td>-->
+<!--                    <td class="table_div">-->
+<!--                        <p>₹220.00</p>-->
+<!--                    </td>-->
+<!--                </tr>-->
                 </tbody>
             </table>
 
