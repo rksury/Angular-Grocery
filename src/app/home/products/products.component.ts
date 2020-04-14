@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from './products.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {CartService} from '../cart/cart.service';
 import {FormControl, FormGroup} from '@angular/forms';
-import { ToastrService} from 'ngx-toastr';
+import {ToastrService} from 'ngx-toastr';
 import {GodService} from '../god.service';
 
 @Component({
@@ -57,9 +57,11 @@ export class ProductsComponent implements OnInit {
     onSubmit(pk) {
         // console.warn(this.submitform.value);
         this.cartService.add_to_cart(pk).subscribe(data => {
-            this.products = data;
         }, error => {
-            this.showProducts = false;
+            console.log(error);
+            if (error.status === 401) {
+                this.router.navigate(['/login']);
+            }
         });
     }
 }

@@ -37,13 +37,13 @@ export class HomeComponent implements OnInit {
         this.user = 'Guest';
     }
 
-    async showToaster() {
-        this.popup = 'show';
-        setTimeout(function() {
-            this.popup = null;
-        }, 2000);
-
-    }
+    // async showToaster() {
+    //     this.popup = 'show';
+    //     setTimeout(function() {
+    //         this.popup = null;
+    //     }, 2000);
+    //
+    // }
 
        onChangeCity(city) {
         this.selectedCity = city;

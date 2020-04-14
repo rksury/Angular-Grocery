@@ -1,34 +1,37 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {ToastrService} from 'ngx-toastr';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class GodService {
-baseUrl = environment.baseurl;
 
-  constructor(private httpClient: HttpClient, private toastr: ToastrService) {
-  }
+    popup = null;
+    baseUrl = environment.baseurl;
 
-  get headers() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-          Authorization: 'Bearer ' + window.localStorage.getItem('token')
-        }
-      )
-    };
-    return httpOptions;
-  }
+    constructor(private httpClient: HttpClient, private toastr: ToastrService) {
+    }
 
-  get(url, queryparams?) {
-    return this.httpClient.get(this.baseUrl, {params: queryparams});
-  }
+    get headers() {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                    Authorization: 'Bearer ' + window.localStorage.getItem('token')
+                }
+            )
+        };
+        return httpOptions;
+    }
 
-  post(url, payload) {
-    return this.httpClient.post(this.baseUrl + url, payload);
-  }
+    // get(url, queryparams?) {
+    //     return this.httpClient.get(this.baseUrl, {params: queryparams});
+    // }
+    //
+    // post(url, payload) {
+    //     return this.httpClient.post(this.baseUrl + url, payload);
+    // }
+
 
 
 }
