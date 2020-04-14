@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HomeService} from './home.service';
 import {Router} from '@angular/router';
 import {LoginService} from './login/login.service';
+import {ToastrService} from 'ngx-toastr';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
     popup = null;
 
     constructor(private homeService: HomeService, private router: Router,
-                private loginService: LoginService) {
+                private loginService: LoginService, private toastr: ToastrService) {
         this.refresh();
     }
 
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
         this.user = 'Guest';
     }
 
-    async showToast() {
+    async showToaster() {
         this.popup = 'show';
         setTimeout(function() {
             this.popup = null;
@@ -44,8 +45,7 @@ export class HomeComponent implements OnInit {
 
     }
 
-
-    onChangeCity(city) {
+       onChangeCity(city) {
         this.selectedCity = city;
 
     }

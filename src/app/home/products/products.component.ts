@@ -4,6 +4,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {CartService} from '../cart/cart.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import { ToastrService} from 'ngx-toastr';
+import {GodService} from '../god.service';
 
 @Component({
     selector: 'app-products',
@@ -26,7 +27,7 @@ export class ProductsComponent implements OnInit {
 
     constructor(private productsService: ProductsService, private cartService: CartService,
                 private activatedRoute: ActivatedRoute, private toast: ToastrService,
-                private router: Router) {
+                private router: Router, private godService: GodService) {
     }
 
     ngOnInit(): void {
