@@ -11,6 +11,7 @@ import {CartService} from '../cart/cart.service';
 })
 export class DashboardComponent implements OnInit {
     products = {};
+    product = {};
     showProducts = true;
     special;
     cart;
@@ -26,9 +27,9 @@ export class DashboardComponent implements OnInit {
     }
 
     products_data() {
-        this.productService.get_all_products().subscribe(data => {
-            this.products = data;
-        });
+        this.productService.get_all_products().subscribe(data => this.products = data);
+            // this.products = data;
+        // });
     }
 
     onSubmit(pk) {

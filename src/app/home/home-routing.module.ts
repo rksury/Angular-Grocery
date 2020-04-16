@@ -12,6 +12,7 @@ import {SignupComponent} from './signup/signup.component';
 import {CartComponent} from './cart/cart.component';
 import {OrderhistoryComponent} from './orderhistory/orderhistory.component';
 
+
 const routes: Routes = [
     {
         path: '', component: HomeComponent,
@@ -29,8 +30,6 @@ const routes: Routes = [
             {path: 'product/:id', component: ProductsComponent },
 
             {path: '', redirectTo: '/', pathMatch: 'full'},
-
-            // { path: '**', component: PageNotFoundComponent }
 
         ]
 
