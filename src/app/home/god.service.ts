@@ -9,7 +9,7 @@ import {ToastrService} from 'ngx-toastr';
 export class GodService {
 
     popup = null;
-    baseUrl = environment.baseurl;
+    // baseUrl = environment.baseurl;
 
     constructor(private httpClient: HttpClient, private toastr: ToastrService) {
     }
@@ -32,6 +32,21 @@ export class GodService {
     //     return this.httpClient.post(this.baseUrl + url, payload);
     // }
 
+    showSuccess(message) {
+        this.toastr.success(message);
+    }
+
+    showError(message) {
+        this.toastr.error(message);
+    }
+
+    showInfo(message, title) {
+        this.toastr.info(message, title);
+    }
+
+    showWarning(message, title) {
+        this.toastr.warning(message, title);
+    }
 
 
 }

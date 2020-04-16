@@ -32,10 +32,12 @@ export class HomeComponent implements OnInit {
 
     userLogout() {
         this.loginService.logOut();
-        // window.localStorage.clear();
+        window.localStorage.clear();
         this.refresh();
         this.user = 'Guest';
     }
+
+
 
     // async showToaster() {
     //     this.popup = 'show';

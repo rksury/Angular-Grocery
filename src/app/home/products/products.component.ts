@@ -57,10 +57,11 @@ export class ProductsComponent implements OnInit {
     onSubmit(pk) {
         // console.warn(this.submitform.value);
         this.cartService.add_to_cart(pk).subscribe(data => {
+                this.godService.showSuccess('Added to cart');
         }, error => {
-            console.log(error);
             if (error.status === 401) {
-                this.router.navigate(['/login']);
+                this.godService.showError('Something went wrong');
+                // this.router.navigate(['/login']);
             }
         });
     }
